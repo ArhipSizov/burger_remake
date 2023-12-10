@@ -24,10 +24,28 @@ function App() {
 
   return (
     <div className="All">
+      <div className="nav"></div>
       <div className="main">
       {menu.map(item => <MenuBlock {...item} key={item.id}/>)}
       </div>
       <p className='name_of_menu'>Бургеры</p>
+      <div className="functions_in_all">
+        <div className='basket'>
+          <div className='basket_all_num'>
+            <p></p>
+            <div></div>
+          </div>
+          <div className="active_burgers"></div>
+          <div className="basket_all_cost"></div>
+          <button></button>
+          <div className="delivery">
+            <img src="../src/assets/Доставка.png" alt="" />
+            <p>Бесплатная доставка</p>
+          </div>
+        </div>
+        <div className='menu_of_burgers'></div>
+      </div>
+      <div className="footer"></div>
     </div>
   )
 }

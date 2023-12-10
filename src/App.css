@@ -2,11 +2,24 @@
   display: flex;
   justify-content: space-around;
   padding-top: 40px;
-  width: 80%;
-  margin-left: 8.5%;
+  width: 100%;
 }
 .name_of_menu{
   font-size: 40px;
   margin-top: 50px;
-  margin-left: 30%;
+  margin-left: 25%;
+}
+.basket{
+  padding: 5%, 7.5%;
+  width: 20%;
+  border-radius:18px;
+  background-color:rgb(255, 255, 255);
+}
+.All{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.functions_in_all{
+  width: 100%;
+  height: 100vh;
 }
