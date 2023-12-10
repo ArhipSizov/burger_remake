@@ -32,7 +32,7 @@ function App() {
       <div className="functions_in_all">
         <div className='basket'>
           <div className='basket_all_num'>
-            <p></p>
+            <p className='basket_all_num_text'>Корзина</p>
             <div></div>
           </div>
           <div className="active_burgers"></div>
