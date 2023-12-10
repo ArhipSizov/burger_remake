@@ -1,0 +1,24 @@
+.menu_div{
+    display: inline;
+    border-radius:13px;
+    padding: 5px;
+    background:rgb(255,255,255);
+    transition: 0.2s linear;
+}
+.menu_img{
+    position: absolute;
+    margin-top: -4px;
+}
+.menu_text{
+    display: inline;
+    margin-left: 30px;
+}
+.menu_div2{
+    display: inline;
+    background: #FFAB08;
+    border-radius:13px;
+    padding: 5px;
+}
+.menu_div:hover{
+    background: #FFAB08;
+}

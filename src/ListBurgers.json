@@ -1,0 +1,129 @@
+{
+    "Menu":[
+        {
+            "img":"../src/assets/Бургеры.png",
+            "text":"Бургеры",
+           "menu_div":"menu_div2" 
+        },
+        {
+            "img":"../src/assets/Вок.png",
+            "text":"Вок" ,
+            "menu_div":"menu_div" 
+        },
+        {
+            "img":"../src/assets/Десерты.png",
+            "text":"Десерты",
+            "menu_div":"menu_div" 
+        },
+        {
+            "img":"../src/assets/Закуски.png",
+            "text":"Закуски",
+            "menu_div":"menu_div" 
+        },
+        {
+            "img":"../src/assets/Комбо.png",
+            "text":"Комбо",
+            "menu_div":"menu_div" 
+        },
+        {
+            "img":"../src/assets/Пицца.png",
+            "text":"Пицца",
+            "menu_div":"menu_div" 
+        },
+        {
+            "img":"../src/assets/Соусы.png",
+            "text":"Соусы",
+            "menu_div":"menu_div" 
+        },
+        {
+            "img":"../src/assets/Хот-доги.png",
+            "text":"Хот-доги",
+            "menu_div":"menu_div" 
+        },
+        {
+            "img":"../src/assets/Шаурма.png",
+            "text":"Шаурма",
+            "menu_div":"menu_div" 
+        }
+    ],
+    "activeUser":[
+        {
+            "img":"../src/assets/burger550.png",
+            "name":"Супер сырный",
+            "cost":"550",
+            "weight":"512",
+            "id":"1"
+        },
+        {
+            "img":"../src/assets/dog.png",
+            "name":"Картошка фри",
+            "cost":"180",
+            "weight":"245",
+            "id":"2"
+        },
+        {
+            "img":"../src/assets/free.png",
+            "name":"Жгучий хот-дог",
+            "cost":"245",
+            "weight":"239",
+            "id":"3"
+        }
+    ],
+    "allUsers":[
+        {
+            "img":"../src/assets/dog.png",
+            "name":"Картошка фри",
+            "cost":"180",
+            "weight":"245",
+            "id":"2"
+        },
+        {
+            "img":"../src/assets/free.png",
+            "name":"Жгучий хот-дог",
+            "cost":"245",
+            "weight":"239",
+            "id":"3"
+        },
+        {
+        "img":"../src/assets/burger550.png",
+        "name":"Супер сырный",
+        "cost":"550",
+        "weight":"512",
+        "id":"1"
+    },
+    {
+        "img":"../src/assets/burger689.png",
+        "name":"Мясная бомба",
+        "cost":"689",
+        "weight":"520",
+        "id":"2"
+    },
+    {
+        "img":"../src/assets/burger480.png",
+        "name":"Тяжелый удар",
+        "cost":"480",
+        "weight":"470",
+        "id":"3"
+    },
+    {
+        "img":"../src/assets/burger450.png",
+        "name":"Вечная классика",
+        "cost":"450",
+        "weight":"450",
+        "id":"4"
+    },
+    {
+        "img":"../src/assets/burger639.png",
+        "name":"Сытный",
+        "cost":"639",
+        "weight":"580",
+        "id":"5"
+    },
+    {
+        "img":"../src/assets/burger560.png",
+        "name":"Итальянский",
+        "cost":"560",
+        "weight":"510",
+        "id":"6"
+    }]
+}
