@@ -71,20 +71,6 @@
     ],
     "allUsers":[
         {
-            "img":"../src/assets/dog.png",
-            "name":"Картошка фри",
-            "cost":"180",
-            "weight":"245",
-            "id":"2"
-        },
-        {
-            "img":"../src/assets/free.png",
-            "name":"Жгучий хот-дог",
-            "cost":"245",
-            "weight":"239",
-            "id":"3"
-        },
-        {
         "img":"../src/assets/burger550.png",
         "name":"Супер сырный",
         "cost":"550",

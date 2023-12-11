@@ -2,7 +2,8 @@ import { useState } from 'react'
 import MenuBlock from "./Menu/Menu"
 import './App.css'
 import arrCard from "./ListBurgers.json"
-import Burger from "./Burger/Burger"
+import BurgerActive from "./BurgerActive/BurgerActive"
+import BurgerList from "./BurgerList/BurgerList"
 
 function App() {
 
@@ -41,7 +42,7 @@ function App() {
             <div className='basket_all_num'>4</div>
           </div>
           <div className="active_burgers">
-          {active.map(item => <Burger {...item} key={item.id}/>)}
+          {active.map(item => <BurgerActive {...item} key={item.id}/>)}
           </div>
           <div className="basket_all_cost_div">
             <p className='basket_all_cost_text'>Итого</p>
@@ -53,7 +54,9 @@ function App() {
             <p className='delivery_text'>Бесплатная доставка</p>
           </div>
         </div>
-        <div className='menu_of_burgers'></div>
+        <div className='menu_of_burgers'>
+        {burgers.map(item => <BurgerList {...item} key={item.id}/>)}
+        </div>
       </div>
       <div className="footer"></div>
     </div>

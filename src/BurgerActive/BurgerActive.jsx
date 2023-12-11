@@ -1,6 +1,6 @@
-import './Burger.css';
+import './BurgerActive.css';
 
-export default function Burger({img, name, weight, cost}){
+export default function BurgerActive({img, name, weight, cost}){
 
 
     return(
