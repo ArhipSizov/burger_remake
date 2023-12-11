@@ -1,0 +1,33 @@
+.BurgerLists{
+    display: block;
+    width: 30%;
+    background: #FFFFFF;
+    margin-bottom: 30px;
+    border-radius:18px;
+}
+.BurgerLists_button{
+    background: #F2F2F3;
+    width: 100%;
+    border:none;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    height: 40px;
+    border-radius:12px;
+}
+.BurgerLists_weight{
+    margin-top: 29px;
+    margin-bottom: 8px;
+    color: #B1B1B1;
+}
+.BurgerLists_cost{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@media(max-width: 1440px) {
+    .BurgerLists{
+        display: block;
+        width: 40%;
+    }
+}

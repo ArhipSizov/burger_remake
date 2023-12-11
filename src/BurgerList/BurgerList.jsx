@@ -1,9 +1,15 @@
 import './BurgerList.css';
 
-export default function BurgerLists({img}){
+export default function BurgerLists({img, cost, name, weight}){
 
 
     return(
-        <img src={img} alt="" />
+        <div className='BurgerLists'>
+            <img src={img} alt="" />
+            <p className='BurgerLists_cost'>{cost}р</p>
+            <p className='BurgerLists_name'>{name}</p>
+            <p className='BurgerLists_weight'>{weight}г</p>
+            <button className='BurgerLists_button'>Добавить</button>
+        </div>
     )
 }

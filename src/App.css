@@ -5,6 +5,7 @@
   width: 100%;
 }
 .name_of_menu{
+  margin-bottom: 24px;
   font-weight: 600;
   font-size: 40px;
   margin-top: 50px;
@@ -65,4 +66,14 @@
   cursor: pointer;
   margin-top: 24px;
   margin-bottom: 8px;
+}
+.menu_of_burgers{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 70%;
+}
+.functions_in_all{
+  display: flex;
+  justify-content: space-between;
 }
