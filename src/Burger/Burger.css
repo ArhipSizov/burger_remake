@@ -1,0 +1,32 @@
+.num_of_burgers_div{
+    display: flex;
+    justify-content: space-between;
+}
+.img_of_burger{
+    width: 60px;
+    height:60px
+}
+.components{
+    display: inline;
+}
+.one_burger{
+    margin-top: 16px;
+    padding-bottom: 16px;
+    border-bottom:#F2F2F3 1px double;
+    display: flex;
+    justify-content: space-between;
+}
+.num_of_burgers_div{
+    display: flex;
+    justify-content: space-around;
+    background: #F2F2F3;
+    width: 84px;
+    height: 40px;
+    border-radius:12px;
+}
+.num_of_burgers{
+    margin-top: 10px;
+}
+.plus_or_minus{
+    width: 10px;
+}

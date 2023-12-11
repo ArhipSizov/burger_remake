@@ -2,25 +2,30 @@ import { useState } from 'react'
 import MenuBlock from "./Menu/Menu"
 import './App.css'
 import arrCard from "./ListBurgers.json"
+import Burger from "./Burger/Burger"
 
 function App() {
 
   const MenuList = arrCard.Menu
 
-  const arrCards = arrCard.allUsers
+  const arrCardsList = arrCard.allUsers
+
+  const arrCardsActive = arrCard.activeUser
+
+  const [active] = useState(arrCardsActive)
+  if (!active){
+    return <h1>Eror404</h1>
+  }
 
   const [menu] = useState(MenuList)
   if (!menu){
     return <h1>Eror404</h1>
   }
 
-  const [burgers] = useState(arrCards)
+  const [burgers] = useState(arrCardsList)
   if (!burgers){
     return <h1>Eror404</h1>
   }
-
-  console.log(menu);
-
 
   return (
     <div className="All">
@@ -31,16 +36,21 @@ function App() {
       <p className='name_of_menu'>Бургеры</p>
       <div className="functions_in_all">
         <div className='basket'>
-          <div className='basket_all_num'>
+          <div className='basket_all_num_div'>
             <p className='basket_all_num_text'>Корзина</p>
-            <div></div>
+            <div className='basket_all_num'>4</div>
           </div>
-          <div className="active_burgers"></div>
-          <div className="basket_all_cost"></div>
-          <button></button>
+          <div className="active_burgers">
+          {active.map(item => <Burger {...item} key={item.id}/>)}
+          </div>
+          <div className="basket_all_cost_div">
+            <p className='basket_all_cost_text'>Итого</p>
+            <p className='basket_all_cost'>1279₽</p>
+          </div>
+          <button className='delyvery_button'>Оформить заказ</button>
           <div className="delivery">
             <img src="../src/assets/Доставка.png" alt="" />
-            <p>Бесплатная доставка</p>
+            <p className='delivery_text'>Бесплатная доставка</p>
           </div>
         </div>
         <div className='menu_of_burgers'></div>
