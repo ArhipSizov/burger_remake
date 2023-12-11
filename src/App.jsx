@@ -28,6 +28,16 @@ function App() {
     return <h1>Eror404</h1>
   }
 
+  const [allNum,setNum] = useState(3)
+  function editAllNum(amper) {
+      setNum(allNum + amper)
+  }
+
+  const [allSum,setSum] = useState(975)
+  function editAllSum(amper2) {
+    setSum(allSum + amper2)
+}
+
   return (
     <div className="All">
       <div className="nav"></div>
@@ -39,14 +49,14 @@ function App() {
         <div className='basket'>
           <div className='basket_all_num_div'>
             <p className='basket_all_num_text'>Корзина</p>
-            <div className='basket_all_num'>4</div>
+            <div className='basket_all_num'>{allNum}</div>
           </div>
           <div className="active_burgers">
-          {active.map(item => <BurgerActive {...item} key={item.id}/>)}
+          {active.map(item => <BurgerActive {...item} key={item.id} editAllNum={editAllNum} editAllSum={editAllSum}/>)}
           </div>
           <div className="basket_all_cost_div">
             <p className='basket_all_cost_text'>Итого</p>
-            <p className='basket_all_cost'>1279₽</p>
+            <p className='basket_all_cost'>{allSum}</p>
           </div>
           <button className='delyvery_button'>Оформить заказ</button>
           <div className="delivery">
