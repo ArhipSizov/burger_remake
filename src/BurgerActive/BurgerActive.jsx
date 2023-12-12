@@ -1,16 +1,15 @@
 import './BurgerActive.css';
 import { useState } from 'react'
 
-export default function BurgerActive({img, name, weight, cost,editAllNum,editAllSum}){
+export default function BurgerActive({delCards,img, name, weight, cost,id,editAllNum,editAllSum}){
 
     const [num,setNum] = useState(1)
     const [sum,setSum] = useState(0)
 
-    const [showComponent, setShowComponent] = useState(true);
 
     function editBut(amper) {
         if (String(amper) === "-1" && num === 0){
-            setShowComponent(false);
+            delCards(id);
             const result2 = sum
             editAllSum(0)
             setSum(result2)
@@ -24,7 +23,7 @@ export default function BurgerActive({img, name, weight, cost,editAllNum,editAll
         let cost2 = -cost
         if (String(amper) === cost2 && sum === 0){
             
-                setShowComponent(false);
+
                 return
               }
       const result2 = sum + amper
@@ -33,7 +32,7 @@ export default function BurgerActive({img, name, weight, cost,editAllNum,editAll
     }
 
     return(
-        showComponent && <div className='one_burger'>
+        <div className='one_burger'>
             <img className='img_of_burger' src={img} alt="" />
             <div className='components'>
                 <p>{name}</p>

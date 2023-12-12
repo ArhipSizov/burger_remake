@@ -6,8 +6,6 @@ import BurgerActive from "./BurgerActive/BurgerActive"
 import BurgerList from "./BurgerList/BurgerList"
 
 function App() {
-  const [allUsers, setAllUsers] = useState(arrCard.BurgerList)
-  const [activeUsers, setActiveUsers] = useState(arrCard.BurgerActive)
 
   const MenuList = arrCard.Menu
 
@@ -15,7 +13,7 @@ function App() {
 
   const arrCardsActive = arrCard.activeUser
 
-  const [active] = useState(arrCardsActive)
+  const [active, setActiveUsers] = useState(arrCardsActive)
   if (!active){
     return <h1>Eror404</h1>
   }
@@ -25,7 +23,7 @@ function App() {
     return <h1>Eror404</h1>
   }
 
-  const [burgers] = useState(arrCardsList)
+  const [burgers, setAllUsers] = useState(arrCardsList)
   if (!burgers){
     return <h1>Eror404</h1>
   }
@@ -41,15 +39,32 @@ function App() {
 }
 
 function addActiveUser(user){
-  const truUser = activeUsers.find((item) => item.nameUser === user.nameUser);
+  console.log(user);
+  const truUser = active.find((item) => item === user);
+  console.log(4343);
   if (truUser) return;
-  const lastid = activeUsers[activeUsers.length - 1].id;
+  editAllSum(+550);
+  editAllNum(+1);
+  console.log(23);
+  const lastid = active[active.length - 1].id;
+  console.log(lastid);
   user.id = lastid + 1;
   setActiveUsers((prevState) => [...prevState, user]);
 }
+
+const [shoeModal,setShowModal] = useState("faulse");
+const[indexUserrModal,setIndexUserModal] = useState(0)
+
 function handleOpenModal(id){
   setShowModal(true)
-  setIndexUserrModal(id - 1);
+  setIndexUserModal(id - 1);
+}
+
+function delCards(id) {
+  const copyBurgersArr = [...active]
+  const newBurgersArr = copyBurgersArr.filter(item => item.id != id)
+  console.log(newBurgersArr);
+  setActiveUsers(newBurgersArr)
 }
 
   return (
@@ -66,11 +81,11 @@ function handleOpenModal(id){
             <div className='basket_all_num'>{allNum}</div>
           </div>
           <div className="active_burgers">
-          {active.map(item => <BurgerActive {...item} key={item.id} editAllNum={editAllNum} editAllSum={editAllSum}/>)}
+          {active.map(item => <BurgerActive {...item} key={item.id} editAllNum={editAllNum} editAllSum={editAllSum} delCards={delCards}/>)}
           </div>
           <div className="basket_all_cost_div">
             <p className='basket_all_cost_text'>Итого</p>
-            <p className='basket_all_cost'>{allSum}</p>
+            <p className='basket_all_cost'>{allSum}р</p>
           </div>
           <button className='delyvery_button'>Оформить заказ</button>
           <div className="delivery">
@@ -79,7 +94,7 @@ function handleOpenModal(id){
           </div>
         </div>
         <div className='menu_of_burgers'>
-        {burgers.map(item => <BurgerList allUsers={allUsers} setAllUsers={setAllUsers} {...item} key={item.id} allUsers={arrCardsList} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>)}
+        <BurgerList allUsers={burgers} setAllUsers={setAllUsers} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>
         </div>
       </div>
       <div className="footer"></div>

@@ -67,11 +67,16 @@
   margin-top: 24px;
   margin-bottom: 8px;
 }
-.menu_of_burgers{
+.menu_of_burgers, .BurgerLists{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.menu_of_burgers{
   width: 70%;
+}
+.BurgerLists{
+  width: 100%;
 }
 .functions_in_all{
   display: flex;
