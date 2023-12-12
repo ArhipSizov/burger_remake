@@ -19,7 +19,6 @@ export default function BurgerActive({img, name, weight, cost,editAllNum,editAll
       const result = num + amper
       editAllNum(amper)
       setNum(result)
-      console.log(result);
     }
     function editBut2(amper) {
         let cost2 = -cost

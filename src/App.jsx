@@ -6,6 +6,8 @@ import BurgerActive from "./BurgerActive/BurgerActive"
 import BurgerList from "./BurgerList/BurgerList"
 
 function App() {
+  const [allUsers, setAllUsers] = useState(arrCard.BurgerList)
+  const [activeUsers, setActiveUsers] = useState(arrCard.BurgerActive)
 
   const MenuList = arrCard.Menu
 
@@ -38,6 +40,18 @@ function App() {
     setSum(allSum + amper2)
 }
 
+function addActiveUser(user){
+  const truUser = activeUsers.find((item) => item.nameUser === user.nameUser);
+  if (truUser) return;
+  const lastid = activeUsers[activeUsers.length - 1].id;
+  user.id = lastid + 1;
+  setActiveUsers((prevState) => [...prevState, user]);
+}
+function handleOpenModal(id){
+  setShowModal(true)
+  setIndexUserrModal(id - 1);
+}
+
   return (
     <div className="All">
       <div className="nav"></div>
@@ -65,7 +79,7 @@ function App() {
           </div>
         </div>
         <div className='menu_of_burgers'>
-        {burgers.map(item => <BurgerList {...item} key={item.id}/>)}
+        {burgers.map(item => <BurgerList allUsers={allUsers} setAllUsers={setAllUsers} {...item} key={item.id} allUsers={arrCardsList} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>)}
         </div>
       </div>
       <div className="footer"></div>
