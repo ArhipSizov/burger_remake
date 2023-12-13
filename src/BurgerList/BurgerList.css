@@ -1,13 +1,16 @@
 .allUsers{
+    padding: 10px;
     display: block;
     width: 30%;
     background: #FFFFFF;
     margin-bottom: 30px;
     border-radius:18px;
+    height: 370px;
 }
 .BurgerLists_button{
     background: #F2F2F3;
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
     border:none;
     font-size: 16px;
     font-family: 'Nunito', sans-serif;

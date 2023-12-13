@@ -39,15 +39,11 @@ function App() {
 }
 
 function addActiveUser(user){
-  console.log(user.cost);
   const truUser = active.find((item) => item === user);
-  console.log(4343);
   if (truUser) return;
   editAllSum(+user.cost);
   editAllNum(+1);
-  console.log(23);
   const lastid = active[active.length - 1].id;
-  console.log(lastid);
   user.id = lastid + 1;
   setActiveUsers((prevState) => [...prevState, user]);
 }
@@ -63,13 +59,22 @@ function handleOpenModal(id){
 function delCards(id) {
   const copyBurgersArr = [...active]
   const newBurgersArr = copyBurgersArr.filter(item => item.id != id)
-  console.log(newBurgersArr);
   setActiveUsers(newBurgersArr)
 }
 
   return (
     <div className="All">
-      <div className="nav"></div>
+      <div className="nav">
+        <img className='nav_img' src="../src/assets/logo.png" alt="" />
+        <div className='mav_no_logo'>
+          <img className='burger_logo' src="../src/assets/burger_logo.png" alt="" />
+          <div className='nav_text'>
+            <p className='nav_text_name_1'>Только самые</p>
+            <p className='nav_text_name_2'>сочные бургеры!</p>
+            <p className='nav_text_another'>Бесплатная доставка от 599₽</p>
+          </div>
+        </div>
+      </div>
       <div className="main">
       {menu.map(item => <MenuBlock {...item} key={item.id}/>)}
       </div>
