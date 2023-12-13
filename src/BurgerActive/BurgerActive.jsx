@@ -30,7 +30,6 @@ export default function BurgerActive({delCards,img, name, weight, cost,id,editAl
       editAllSum(amper)
       setSum(result2)
     }
-    console.log(cost);
 if (cost == undefined) {
     return
 }else{

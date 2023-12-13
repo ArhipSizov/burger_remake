@@ -39,11 +39,11 @@ function App() {
 }
 
 function addActiveUser(user){
-  console.log(user);
+  console.log(user.cost);
   const truUser = active.find((item) => item === user);
   console.log(4343);
   if (truUser) return;
-  editAllSum(+550);
+  editAllSum(+user.cost);
   editAllNum(+1);
   console.log(23);
   const lastid = active[active.length - 1].id;
