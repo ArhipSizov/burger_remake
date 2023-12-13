@@ -28,12 +28,12 @@ function App() {
     return <h1>Eror404</h1>
   }
 
-  const [allNum,setNum] = useState(3)
+  const [allNum, setNum] = useState(2);
   function editAllNum(amper) {
       setNum(allNum + amper)
   }
 
-  const [allSum,setSum] = useState(975)
+  const [allSum, setSum] = useState(425);
   function editAllSum(amper2) {
     setSum(allSum + amper2)
 }

@@ -30,7 +30,10 @@ export default function BurgerActive({delCards,img, name, weight, cost,id,editAl
       editAllSum(amper)
       setSum(result2)
     }
-
+    console.log(cost);
+if (cost == undefined) {
+    return
+}else{
     return(
         <div className='one_burger'>
             <img className='img_of_burger' src={img} alt="" />
@@ -51,5 +54,5 @@ export default function BurgerActive({delCards,img, name, weight, cost,id,editAl
         }} className='plus_or_minus' src="../src/assets/plus.svg" alt="" />
             </div>
         </div>
-    )
+    )}
 }
