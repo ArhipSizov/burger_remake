@@ -9,7 +9,7 @@ function App() {
 
   const MenuList = arrCard.Menu
 
-  const arrCardsList = arrCard.allUsers
+  const arrCardsList = arrCard.allBurgers
 
   const arrCardsActive = arrCard.activeUser
 
@@ -102,7 +102,29 @@ function delCards(id) {
         <BurgerList allUsers={burgers} setAllUsers={setAllUsers} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>
         </div>
       </div>
-      <div className="footer"></div>
+      <div className="footer">
+        <div className='left_footer'>
+          <img className='left_footer_img' src="../src/assets/logo_footer.png" alt="" />
+          <div>
+            <p>© YouMeal, 2022</p>
+            <p>Design: Anastasia Ilina</p>
+          </div>
+        </div>
+        <div className='center_footer'>
+          <p className='center_footer_p'>Номер для заказа</p>
+          <div className='center_footer_div'>
+            <img className='center_footer_img' src="../src/assets/call.png" alt="" />
+            <p className='center_footer_number'>+7(930)833-38-11</p>
+          </div>
+        </div>
+        <div className='right_footer'>
+          <p className='right_footer_p'>Мы в соцсетях</p>
+          <div className='right_footer_div'>
+            <img className='right_footer_WK' src="../src/assets/WK.png" alt="" />
+            <img className='right_footer_telegram' src="../src/assets/telegram.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
