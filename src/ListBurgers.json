@@ -51,14 +51,14 @@
       "id": "0"
     },
     {
-      "img": "../src/assets/dog.png",
+      "img": "../src/assets/free.png",
       "name": "Картошка фри",
       "cost": "180",
       "weight": "245",
       "id": "1"
     },
     {
-      "img": "../src/assets/free.png",
+      "img": "../src/assets/dog.png",
       "name": "Жгучий хот-дог",
       "cost": "245",
       "weight": "239",
