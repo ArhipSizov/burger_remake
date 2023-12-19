@@ -3,66 +3,52 @@
     {
       "img": "../src/assets/Бургеры.png",
       "text": "Бургеры",
-      "menu_div": "menu_div2"
+      "link": "burgers"
     },
     {
       "img": "../src/assets/Вок.png",
       "text": "Вок",
-      "menu_div": "menu_div"
+      "link": "wok"
     },
     {
       "img": "../src/assets/Десерты.png",
       "text": "Десерты",
-      "menu_div": "menu_div"
+      "link": "dessert"
     },
     {
       "img": "../src/assets/Закуски.png",
       "text": "Закуски",
-      "menu_div": "menu_div"
+      "link": "snacks"
     },
     {
       "img": "../src/assets/Комбо.png",
       "text": "Комбо",
-      "menu_div": "menu_div"
+      "link": "combo"
     },
     {
       "img": "../src/assets/Пицца.png",
       "text": "Пицца",
-      "menu_div": "menu_div"
+      "link": "pizza"
     },
     {
       "img": "../src/assets/Соусы.png",
       "text": "Соусы",
-      "menu_div": "menu_div"
+      "link": "sauces"
     },
     {
       "img": "../src/assets/Хот-доги.png",
       "text": "Хот-доги",
-      "menu_div": "menu_div"
+      "link": "HotDogs"
     },
     {
       "img": "../src/assets/Шаурма.png",
       "text": "Шаурма",
-      "menu_div": "menu_div"
+      "link": "shawarma"
     }
   ],
   "activeUser": [
     {
       "id": "0"
-    },
-    {
-      "img": "../src/assets/free.png",
-      "name": "Картошка фри",
-      "cost": "180",
-      "weight": "245",
-      "id": "1"
-    },
-    {
-      "img": "../src/assets/dog.png",
-      "name": "Жгучий хот-дог",
-      "cost": "245",
-      "weight": "239",
-      "id": "2"
     }
   ],
   "allBurgers": [

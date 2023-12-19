@@ -1,15 +1,30 @@
 import { useState } from 'react'
-import MenuBlock from "./Menu/Menu"
+import MenuBlock from "../Menu/Menu"
 import './App.css'
-import arrCard from "./ListBurgers.json"
-import BurgerActive from "./BurgerActive/BurgerActive"
-import BurgerList from "./BurgerList/BurgerList"
+import arrCard from "../ListBurgers.json"
+import BurgerActive from "../BurgerActive/BurgerActive"
+
+
+import Burgers from "../Pages/Burgers/Burgers"
+import HotDogs from "../Pages/HotDogs/HotDogs"
+import Snacks from "../Pages/Snacks/Snacks"
+import Error from "../Pages/Error/Error"
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  NavLink,
+} from "react-router-dom";
 
 function App() {
 
   const MenuList = arrCard.Menu
 
-  const arrCardsList = arrCard.allBurgers
+  const arrCardsListBurgers = arrCard.allBurgers
+
+  const arrCardsListSnacks = arrCard.allSnacks
+
+  const arrCardsListHotDogs = arrCard.allHotDogs
 
   const arrCardsActive = arrCard.activeUser
 
@@ -23,17 +38,27 @@ function App() {
     return <h1>Eror404</h1>
   }
 
-  const [burgers, setAllUsers] = useState(arrCardsList)
+  const [burgers, setAllUsersBurgers] = useState(arrCardsListBurgers)
   if (!burgers){
     return <h1>Eror404</h1>
   }
 
-  const [allNum, setNum] = useState(2);
+  const [snacks, setAllUsersSnacks] = useState(arrCardsListSnacks)
+  if (!burgers){
+    return <h1>Eror404</h1>
+  }
+
+  const [hotdogs, setAllUsersHotDogs] = useState(arrCardsListHotDogs)
+  if (!burgers){
+    return <h1>Eror404</h1>
+  }
+
+  const [allNum, setNum] = useState(0);
   function editAllNum(amper) {
       setNum(allNum + amper)
   }
 
-  const [allSum, setSum] = useState(425);
+  const [allSum, setSum] = useState(0);
   function editAllSum(amper2) {
     setSum(allSum + amper2)
 }
@@ -63,6 +88,7 @@ function delCards(id) {
 }
 
   return (
+    <Router>
     <div className="All">
       <div className="nav">
         <img className='nav_img' src="../src/assets/logo.png" alt="" />
@@ -78,7 +104,6 @@ function delCards(id) {
       <div className="main">
       {menu.map(item => <MenuBlock {...item} key={item.id}/>)}
       </div>
-      <p className='name_of_menu'>Бургеры</p>
       <div className="functions_in_all">
         <div className='basket'>
           <div className='basket_all_num_div'>
@@ -98,10 +123,15 @@ function delCards(id) {
             <p className='delivery_text'>Бесплатная доставка</p>
           </div>
         </div>
-        <div className='menu_of_burgers'>
-        <BurgerList allUsers={burgers} setAllUsers={setAllUsers} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>
+        <div className="menu_of_burgers">
+          <Routes>
+            <Route path='/burgers' element={<Burgers allUsers={burgers} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
+            <Route path='/snacks' element={<Snacks allUsers={snacks} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
+            <Route path='/hotdogs' element={<HotDogs allUsers={hotdogs} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
+            <Route path='*' element={<Error/>}/>
+          </Routes>
         </div>
-      </div>
+        </div>
       <div className="footer">
         <div className='left_footer'>
           <img className='left_footer_img' src="../src/assets/logo_footer.png" alt="" />
@@ -126,6 +156,7 @@ function delCards(id) {
         </div>
       </div>
     </div>
+    </Router>
   )
 }
 

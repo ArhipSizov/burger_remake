@@ -1,5 +1,6 @@
 .menu_div{
     display: inline;
+    text-decoration: none;
     border-radius:13px;
     padding: 5px;
     background:rgb(255,255,255);
@@ -12,6 +13,7 @@
 .menu_text{
     display: inline;
     margin-left: 30px;
+    color:black;
 }
 .menu_div2{
     display: inline;
