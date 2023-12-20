@@ -74,7 +74,7 @@
   flex-wrap: wrap;
 }
 .menu_of_burgers{
-  width: 70%;
+  width: 100%;
 }
 .BurgerLists{
   width: 100%;
@@ -157,4 +157,7 @@
   background: #FFAB08;
   text-decoration: none;
   color:#ffffff;
+}
+.menu_of_burgers_all{
+  width: 70%;
 }

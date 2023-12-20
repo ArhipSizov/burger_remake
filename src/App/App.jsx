@@ -19,19 +19,12 @@ import {
 function App() {
 
   const MenuList = arrCard.Menu
-
   const arrCardsListBurgers = arrCard.allBurgers
-
   const arrCardsListSnacks = arrCard.allSnacks
-
   const arrCardsListHotDogs = arrCard.allHotDogs
-
   const arrCardsActive = arrCard.activeUser
-
   const [active, setActiveUsers] = useState(arrCardsActive)
-  if (!active){
-    return <h1>Eror404</h1>
-  }
+
 
   const [menu] = useState(MenuList)
   if (!menu){
@@ -86,6 +79,9 @@ function delCards(id) {
   const newBurgersArr = copyBurgersArr.filter(item => item.id != id)
   setActiveUsers(newBurgersArr)
 }
+if (!active && !menu && !burgers && !snacks && !hotdogs){
+  return <h1>Eror404</h1>
+}
 
   return (
     <Router>
@@ -123,14 +119,12 @@ function delCards(id) {
             <p className='delivery_text'>Бесплатная доставка</p>
           </div>
         </div>
-        <div className="menu_of_burgers">
           <Routes>
             <Route path='/burgers' element={<Burgers allUsers={burgers} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
             <Route path='/snacks' element={<Snacks allUsers={snacks} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
             <Route path='/hotdogs' element={<HotDogs allUsers={hotdogs} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
             <Route path='*' element={<Error/>}/>
           </Routes>
-        </div>
         </div>
       <div className="footer">
         <div className='left_footer'>
