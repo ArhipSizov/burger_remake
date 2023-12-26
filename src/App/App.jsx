@@ -120,7 +120,7 @@ if (!active && !menu && !burgers && !snacks && !hotdogs){
           </div>
         </div>
           <Routes>
-            <Route path='/burgers' element={<Burgers allUsers={burgers} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
+            <Route path='/' element={<Burgers allUsers={burgers} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
             <Route path='/snacks' element={<Snacks allUsers={snacks} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
             <Route path='/hotdogs' element={<HotDogs allUsers={hotdogs} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
             <Route path='*' element={<Error/>}/>

@@ -6,7 +6,6 @@ export default function BurgerLists({
   addActiveUser,
   handleOpenModal,
 }) {
-
   return (
     <div className="BurgerLists">
       {allUsers.map((item) => (

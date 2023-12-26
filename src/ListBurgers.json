@@ -3,7 +3,7 @@
     {
       "img": "../src/assets/Бургеры.png",
       "text": "Бургеры",
-      "link": "burgers"
+      "link": "/"
     },
     {
       "img": "../src/assets/Вок.png",
