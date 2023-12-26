@@ -100,7 +100,6 @@ if (!active && !menu && !burgers && !snacks && !hotdogs){
       <div className="main">
       {menu.map(item => <MenuBlock {...item} key={item.id}/>)}
       </div>
-      <div className="functions_in_all">
         <div className='basket'>
           <div className='basket_all_num_div'>
             <p className='basket_all_num_text'>Корзина</p>
@@ -125,7 +124,6 @@ if (!active && !menu && !burgers && !snacks && !hotdogs){
             <Route path='/hotdogs' element={<HotDogs allUsers={hotdogs} addActiveUser={addActiveUser} handleOpenModal={handleOpenModal}/>}/>
             <Route path='*' element={<Error/>}/>
           </Routes>
-        </div>
       <div className="footer">
         <div className='left_footer'>
           <img className='left_footer_img' src="../src/assets/logo_footer.png" alt="" />
