@@ -30,3 +30,9 @@
 .plus_or_minus{
     width: 10px;
 }
+.close_in_num{
+    width: 24px;
+    height: 24px;
+    margin-left: 60px;
+    cursor: pointer;
+}

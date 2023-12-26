@@ -7,6 +7,16 @@ export default function BurgerActive({delCards,img, name, weight, cost,id,editAl
     const [sum,setSum] = useState(0)
 
 
+    function close(amper, amper2){
+        amper2 = cost * num * -1
+        delCards(id);
+        const result = amper + num
+        editAllNum(amper)
+        setNum(result)
+        const result2 = amper2
+        editAllSum(amper2)
+        setSum(result2)
+    }
     function editBut(amper) {
         if (String(amper) === "-1" && num === 0){
             delCards(id);
@@ -41,6 +51,8 @@ if (cost == undefined) {
                 <p>{weight}г</p>
                 <p>{cost}р</p>
             </div>
+            <div className='num_of_burgers_div_and_close'>
+                <img onClick={() => {close(-num, -cost)}} className='close_in_num' src="../src/assets/close.svg" alt="" />
             <div className='num_of_burgers_div'>
                 <img onClick={() => {
           editBut2(-cost);
@@ -51,6 +63,7 @@ if (cost == undefined) {
           editBut2(+cost);
           editBut(+1);
         }} className='plus_or_minus' src="../src/assets/plus.svg" alt="" />
+            </div>
             </div>
         </div>
     )}
