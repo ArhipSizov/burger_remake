@@ -54,6 +54,7 @@ function App() {
   }
 
   function addActiveUser(user) {
+    console.log(user);
     const truUser = active.find((item) => item === user);
     if (truUser) return;
     editAllSum(+user.cost);
@@ -61,6 +62,7 @@ function App() {
     const lastid = active[active.length - 1].id;
     user.id = lastid + 1;
     setActiveUsers((prevState) => [...prevState, user]);
+    console.log(2121);
   }
 
   function delCards(id) {
@@ -76,7 +78,6 @@ function App() {
   const [indexUserModal, setIndexUserModal] = useState(0);
 
   function handleOpenModal(id) {
-    console.log(4334);
     setShowModal(true);
     setIndexUserModal(id - 1);
   }

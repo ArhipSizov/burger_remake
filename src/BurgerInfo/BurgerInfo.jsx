@@ -1,6 +1,6 @@
 import "./BurgerInfo.css";
 
-export default function BurgerInfo({ item, showModal, setIndexUserModal}) {
+export default function BurgerInfo({ item, showModal, setIndexUserModal, addActiveUser}) {
 
 
   return (
@@ -8,22 +8,24 @@ export default function BurgerInfo({ item, showModal, setIndexUserModal}) {
       <div className="BurgerInfo">
         <div className="BurgerInfo_div">
           <div>
-            <p>{item.name}</p>
-            <img src="../src/assets/close.svg" alt="" />
+            <p className="BurgerInfo_name">{item.name}</p>
+            <img className="close_img" src="../src/assets/close.svg" alt="" />
           </div>
-          <div>
+          <div className="BurgerInfo_footer">
             <img src={item.img} alt="" />
-            <div>
+            <div className="BurgerInfo_footer_div">
               <p>
                 Супер мясное наслаждение! Большая рубленая котлета из свежего
                 говяжего мяса покорит вас своей сочностью, а хрустящие листья
                 салата добавят свежести.
               </p>
               <div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>Состав:</p>
+                <p>Пшеничная булочка</p>
+                <p>Котлета из говядины</p>
+                <p>Красный лук</p>
+                <p>Листья салата</p>
+                <p>Соус горчичный</p>
                 <div>
                     <p>{item.weight}г,</p>
                     <p>ккал 440</p>
@@ -31,8 +33,8 @@ export default function BurgerInfo({ item, showModal, setIndexUserModal}) {
               </div>
             </div>
           </div>
-          <div>
-            <button></button>
+          <div className="BurgerInfo_div_2">
+            <button onClick={addActiveUser} className="BurgerInfo_button">Добавить</button>
             <div className='num_of_burgers_div'>
                 <img onClick={() => {
 

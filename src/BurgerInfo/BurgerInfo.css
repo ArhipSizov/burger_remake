@@ -13,4 +13,36 @@
     margin-top: 20vh;
     background-color:rgb(255, 255, 255);
     border-radius: 24px;
+    padding: 24px;
+}
+.close_img{
+    position: absolute;
+    margin-left: 45%;
+    margin-top: -40px;
+}
+.BurgerInfo_name{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+.BurgerInfo_footer{
+    display: flex;
+    justify-content: space-between;
+}
+.BurgerInfo_footer_div{
+    padding-left: 5%;
+}
+.BurgerInfo_button{
+    width: 276px;
+    height: 40px;
+    border-radius: 12px;
+    border-style: none;
+    background-color: #FF7020;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.BurgerInfo_div_2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
 }

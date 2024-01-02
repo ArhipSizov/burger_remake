@@ -1,12 +1,27 @@
 import "./Burgers.css";
 import BurgerList from "../../BurgerList/BurgerList";
-import BurgerInfo from "../../BurgerInfo/BurgerInfo"
+import BurgerInfo from "../../BurgerInfo/BurgerInfo";
 
-export default function Burgers({ allUsers, addActiveUser, handleOpenModal, showModal, indexUserModal, setIndexUserModal}) {
-console.log(allUsers);
+export default function Burgers({
+  allUsers,
+  addActiveUser,
+  handleOpenModal,
+  showModal,
+  indexUserModal,
+  setIndexUserModal,
+}) {
+
   return (
     <div className="menu_of_burgers_all">
-      {showModal && <BurgerInfo setIndexUserModal={setIndexUserModal} showModal={showModal} item={allUsers[indexUserModal]}/>}
+      {showModal && (
+        <BurgerInfo
+          setIndexUserModal={setIndexUserModal}
+          showModal={showModal}
+          item={allUsers[indexUserModal]}
+          addActiveUser={addActiveUser}
+          allUsers={allUsers}
+        />
+      )}
       <p className="name_of_menu">Бургеры</p>
       <div className="menu_of_burgers">
         <BurgerList
