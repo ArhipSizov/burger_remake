@@ -81,6 +81,8 @@ function App() {
     setShowModal(true);
     setIndexUserModal(id - 1);
   }
+
+
   return (
     <Router>
       <div className="All">
@@ -141,6 +143,7 @@ function App() {
                 handleOpenModal={handleOpenModal}
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
+                setShowModal={setShowModal}
               />
             }
           />

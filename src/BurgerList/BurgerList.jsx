@@ -5,7 +5,7 @@ import BurgerInfo from "../BurgerInfo/BurgerInfo"
 
 export default function BurgerLists({
   allUsers,
-  addActiveUser, handleOpenModal, showModal
+  addActiveUser, handleOpenModal
 }) {
 
 
@@ -16,12 +16,13 @@ export default function BurgerLists({
         <div
           className="allUsers"
           key={uuidv4()}
-          onClick={()=>{handleOpenModal(item.id)}}
-        >
+          
+        ><div onClick={()=>{handleOpenModal(item.id)}} >
           <img className="BurgerLists_img" src={item.img} alt="" />
           <p className="BurgerLists_cost">{item.cost}р</p>
           <p className="BurgerLists_name">{item.name}</p>
           <p className="BurgerLists_weight">{item.weight}г</p>
+          </div>
           <button
             className="BurgerLists_button"
             onClick={() => {

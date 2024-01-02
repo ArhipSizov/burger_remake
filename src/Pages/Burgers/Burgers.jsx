@@ -9,12 +9,15 @@ export default function Burgers({
   showModal,
   indexUserModal,
   setIndexUserModal,
+  setShowModal
 }) {
+
 
   return (
     <div className="menu_of_burgers_all">
       {showModal && (
         <BurgerInfo
+        setShowModal={setShowModal}
           setIndexUserModal={setIndexUserModal}
           showModal={showModal}
           item={allUsers[indexUserModal]}

@@ -1,11 +1,16 @@
 import "./BurgerInfo.css";
 
-export default function BurgerInfo({ item, showModal, setIndexUserModal, addActiveUser}) {
-
+export default function BurgerInfo({
+  item,
+  showModal,
+  setIndexUserModal,
+  addActiveUser,
+  setShowModal
+}) {
 
   return (
     showModal && (
-      <div className="BurgerInfo">
+      <div className="BurgerInfo" onClick={()=>setShowModal(false)}>
         <div className="BurgerInfo_div">
           <div>
             <p className="BurgerInfo_name">{item.name}</p>
@@ -27,22 +32,30 @@ export default function BurgerInfo({ item, showModal, setIndexUserModal, addActi
                 <p>Листья салата</p>
                 <p>Соус горчичный</p>
                 <div>
-                    <p>{item.weight}г,</p>
-                    <p>ккал 440</p>
+                  <p>{item.weight}г,</p>
+                  <p>ккал 440</p>
                 </div>
               </div>
             </div>
           </div>
           <div className="BurgerInfo_div_2">
-            <button onClick={addActiveUser} className="BurgerInfo_button">Добавить</button>
-            <div className='num_of_burgers_div'>
-                <img onClick={() => {
-
-        }} className='plus_or_minus' src="../src/assets/minus.svg" alt="" />
-                <p className='num_of_burgers'>0</p>
-                <img onClick={() => {
-
-        }} className='plus_or_minus' src="../src/assets/plus.svg" alt="" />
+            <button onClick={addActiveUser} className="BurgerInfo_button">
+              Добавить
+            </button>
+            <div className="num_of_burgers_div">
+              <img
+                onClick={() => {}}
+                className="plus_or_minus"
+                src="../src/assets/minus.svg"
+                alt=""
+              />
+              <p className="num_of_burgers">0</p>
+              <img
+                onClick={() => {}}
+                className="plus_or_minus"
+                src="../src/assets/plus.svg"
+                alt=""
+              />
             </div>
             <p>{item.cost}р</p>
           </div>
