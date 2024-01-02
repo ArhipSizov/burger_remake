@@ -60,7 +60,8 @@ function App() {
     editAllSum(+user.cost);
     editAllNum(+1);
     const lastid = active[active.length - 1].id;
-    user.id = lastid + 1;
+    user.id = +lastid + 1;
+    console.log(lastid);
     setActiveUsers((prevState) => [...prevState, user]);
     console.log(2121);
   }
@@ -79,9 +80,8 @@ function App() {
 
   function handleOpenModal(id) {
     setShowModal(true);
-    setIndexUserModal(id - 1);
+    setIndexUserModal(id - 1)
   }
-
 
   return (
     <Router>
@@ -149,12 +149,30 @@ function App() {
           />
           <Route
             path="/snacks"
-            element={<Snacks allUsers={snacks} addActiveUser={addActiveUser} />}
+            element={
+              <Snacks
+                allUsers={snacks}
+                addActiveUser={addActiveUser}
+                showModal={showModal}
+                handleOpenModal={handleOpenModal}
+                indexUserModal={indexUserModal}
+                setIndexUserModal={setIndexUserModal}
+                setShowModal={setShowModal}
+              />
+            }
           />
           <Route
             path="/hotdogs"
             element={
-              <HotDogs allUsers={hotdogs} addActiveUser={addActiveUser} />
+              <HotDogs
+                allUsers={hotdogs}
+                addActiveUser={addActiveUser}
+                showModal={showModal}
+                handleOpenModal={handleOpenModal}
+                indexUserModal={indexUserModal}
+                setIndexUserModal={setIndexUserModal}
+                setShowModal={setShowModal}
+              />
             }
           />
           <Route path="*" element={<Error />} />

@@ -1,16 +1,39 @@
 import './Snacks.css'
 import BurgerList from "../../BurgerList/BurgerList"
+import BurgerInfo from "../../BurgerInfo/BurgerInfo";
 
 export default function Snacks({
     allUsers,
-    addActiveUser
+    addActiveUser,
+    handleOpenModal,
+    showModal,
+    indexUserModal,
+    setIndexUserModal,
+    setShowModal
   }) {
+  
+  
     return (
-        <div className="menu_of_burgers_all">
-        <div className='menu_of_burgers'>
-            <p className='name_of_menu'>Закуски</p>
-        <BurgerList allUsers={allUsers} addActiveUser={addActiveUser}/>
+      <div className="menu_of_burgers_all">
+        {showModal && (
+          <BurgerInfo
+          setShowModal={setShowModal}
+            setIndexUserModal={setIndexUserModal}
+            showModal={showModal}
+            item={allUsers[indexUserModal]}
+            addActiveUser={addActiveUser}
+            allUsers={allUsers}
+          />
+        )}
+        <p className="name_of_menu">Закуски</p>
+        <div className="menu_of_burgers">
+          <BurgerList
+            allUsers={allUsers}
+            addActiveUser={addActiveUser}
+            showModal={showModal}
+            handleOpenModal={handleOpenModal}
+          />
         </div>
-        </div>
-    )
-}
+      </div>
+    );
+  }

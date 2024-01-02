@@ -16,8 +16,9 @@ export default function BurgerLists({
         <div
           className="allUsers"
           key={uuidv4()}
+
           
-        ><div onClick={()=>{handleOpenModal(item.id)}} >
+        ><div onClick={()=>{handleOpenModal(item.id_false)}} >
           <img className="BurgerLists_img" src={item.img} alt="" />
           <p className="BurgerLists_cost">{item.cost}р</p>
           <p className="BurgerLists_name">{item.name}</p>

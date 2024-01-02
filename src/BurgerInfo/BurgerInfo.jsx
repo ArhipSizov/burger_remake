@@ -7,7 +7,7 @@ export default function BurgerInfo({
   addActiveUser,
   setShowModal
 }) {
-
+console.log(item);
   return (
     showModal && (
       <div className="BurgerInfo" onClick={()=>setShowModal(false)}>

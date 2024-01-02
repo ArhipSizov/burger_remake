@@ -57,42 +57,48 @@
       "name": "Супер сырный",
       "cost": "550",
       "weight": "512",
-      "id": "1"
+      "id": "1",
+      "id_false": "1"
     },
     {
       "img": "../src/assets/burger689.png",
       "name": "Мясная бомба",
       "cost": "689",
       "weight": "520",
-      "id": "2"
+      "id": "2",
+      "id_false": "2"
     },
     {
       "img": "../src/assets/burger480.png",
       "name": "Тяжелый удар",
       "cost": "480",
       "weight": "470",
-      "id": "3"
+      "id": "3",
+      "id_false": "3"
     },
     {
       "img": "../src/assets/burger450.png",
       "name": "Вечная классика",
       "cost": "450",
       "weight": "450",
-      "id": "4"
+      "id": "4",
+      "id_false": "4"
     },
     {
       "img": "../src/assets/burger639.png",
       "name": "Сытный",
       "cost": "639",
       "weight": "580",
-      "id": "5"
+      "id": "5",
+      "id_false": "5"
     },
     {
       "img": "../src/assets/burger560.png",
       "name": "Итальянский",
       "cost": "560",
       "weight": "510",
-      "id": "6"
+      "id": "6",
+      "id_false": "6"
     }
   ],
   "allSnacks":[
@@ -101,21 +107,24 @@
         "name": "Начос",
         "cost": "250",
         "weight": "220",
-        "id": "1"
+        "id": "1",
+        "id_false": "1"
     },
     {
         "img": "../src/assets/Potato.png",
         "name": "Картошка фри",
         "cost": "245",
         "weight": "180",
-        "id": "2"
+        "id": "2",
+        "id_false": "2"
     },
     {
         "img": "../src/assets/Rings.png",
         "name": "Луковые кольца",
         "cost": "230",
         "weight": "160",
-        "id": "3"
+        "id": "3",
+        "id_false": "3"
     }
   ],
   "allHotDogs":[
@@ -124,21 +133,24 @@
         "name": "Домашний хот-дог",
         "cost": "290",
         "weight": "250",
-        "id": "1"
+        "id": "1",
+        "id_false": "1"
     },
     {
         "img": "../src/assets/HotDog239.png",
         "name": "Жгучий хот-дог",
         "cost": "239",
         "weight": "245",
-        "id": "2"
+        "id": "2",
+        "id_false": "2"
     },
     {
         "img": "../src/assets/HotDog220.png",
         "name": "Классический хот-дог",
         "cost": "220",
         "weight": "215",
-        "id": "3"
+        "id": "3",
+        "id_false": "3"
     }
   ]
 }
