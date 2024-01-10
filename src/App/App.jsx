@@ -65,6 +65,18 @@ function App() {
     setActiveUsers((prevState) => [...prevState, user]);
     console.log(2121);
   }
+  function addActiveUser_2(user, num) {
+    console.log(user);
+    const truUser = active.find((item) => item === user);
+    if (truUser) return;
+    editAllSum(+user.cost);
+    editAllNum(+1);
+    const lastid = active[active.length - 1].id;
+    user.id = +lastid + 1;
+    console.log(lastid);
+    setActiveUsers((prevState) => [...prevState, user]);
+    console.log(2121);
+  }
 
   function delCards(id) {
     const copyBurgersArr = [...active];
@@ -138,12 +150,14 @@ function App() {
             element={
               <Burgers
                 allUsers={burgers}
-                addActiveUser={addActiveUser}
+                addActiveUser={addActiveUser_2}
                 showModal={showModal}
                 handleOpenModal={handleOpenModal}
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
+                editAllNum={editAllNum}
+                editAllSum={editAllSum}
               />
             }
           />

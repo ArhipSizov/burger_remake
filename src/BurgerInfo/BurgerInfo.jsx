@@ -1,13 +1,47 @@
 import "./BurgerInfo.css";
+import { useState } from "react";
 
 export default function BurgerInfo({
   item,
   showModal,
   setIndexUserModal,
   addActiveUser,
+  handleOpenModal,
+  editAllNum,
+  editAllSum,
   setShowModal
 }) {
 console.log(item);
+
+const [num, setNum] = useState(1);
+const [sum, setSum] = useState(0);
+
+function editBut(amper) {
+  if (String(amper) === "-1" && num === 0){
+
+      const result2 = sum
+      editAllSum(0)
+      setSum(result2)
+      return
+  }
+const result = num + amper
+editAllNum(amper)
+setNum(result)
+}
+function editBut2(amper) {
+  let cost2 = -item.cost
+  if (String(amper) === cost2 && sum === 0){
+      
+
+          return
+        }
+const result2 = sum + amper
+editAllSum(amper)
+setSum(result2)
+}
+
+
+
   return (
     showModal && (
       <div className="BurgerInfo" onClick={()=>setShowModal(false)}>
@@ -39,19 +73,25 @@ console.log(item);
             </div>
           </div>
           <div className="BurgerInfo_div_2">
-            <button onClick={addActiveUser} className="BurgerInfo_button">
+            <button onClick={()=>addActiveUser(item)} className="BurgerInfo_button">
               Добавить
             </button>
-            <div className="num_of_burgers_div">
+            <div className="num_of_burgers_div" onClick={(e)=>{e.stopPropagation()}} >
               <img
-                onClick={() => {}}
+                              onClick={() => {
+                                editBut2(-item.cost);
+                                editBut(-1);
+                              }}
                 className="plus_or_minus"
                 src="../src/assets/minus.svg"
                 alt=""
               />
-              <p className="num_of_burgers">0</p>
+              <p className="num_of_burgers">{num}</p>
               <img
-                onClick={() => {}}
+                              onClick={() => {
+                                editBut2(+item.cost);
+                                editBut(+1);
+                              }}
                 className="plus_or_minus"
                 src="../src/assets/plus.svg"
                 alt=""

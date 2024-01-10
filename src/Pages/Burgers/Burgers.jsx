@@ -9,6 +9,8 @@ export default function Burgers({
   showModal,
   indexUserModal,
   setIndexUserModal,
+  editAllNum,
+  editAllSum,
   setShowModal
 }) {
 
@@ -17,12 +19,15 @@ export default function Burgers({
     <div className="menu_of_burgers_all">
       {showModal && (
         <BurgerInfo
+        handleOpenModal={handleOpenModal}
         setShowModal={setShowModal}
           setIndexUserModal={setIndexUserModal}
           showModal={showModal}
           item={allUsers[indexUserModal]}
           addActiveUser={addActiveUser}
           allUsers={allUsers}
+          editAllNum={editAllNum}
+          editAllSum={editAllSum}
         />
       )}
       <p className="name_of_menu">Бургеры</p>
