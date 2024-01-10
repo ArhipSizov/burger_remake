@@ -4,7 +4,6 @@ import { useState } from "react";
 export default function BurgerInfo({
   item,
   showModal,
-  setIndexUserModal,
   addActiveUser,
   editAllNum,
   editAllSum,
@@ -72,7 +71,7 @@ setSum(result2)
             </div>
           </div>
           <div className="BurgerInfo_div_2">
-            <button onClick={()=>addActiveUser(item, num)} className="BurgerInfo_button">
+            <button onClick={()=>addActiveUser(item)} className="BurgerInfo_button">
               Добавить
             </button>
             <div className="num_of_burgers_div" onClick={(e)=>{e.stopPropagation()}} >

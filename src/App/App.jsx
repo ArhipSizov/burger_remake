@@ -3,6 +3,7 @@ import MenuBlock from "../Menu/Menu";
 import "./App.css";
 import arrCard from "../ListBurgers.json";
 import BurgerActive from "../BurgerActive/BurgerActive";
+import DeliveryAdd from "../DeliveryAdd/DeliveryAdd"
 
 import Burgers from "../Pages/Burgers/Burgers";
 import HotDogs from "../Pages/HotDogs/HotDogs";
@@ -62,7 +63,7 @@ function App() {
     user.id = +lastid + 1;
     setActiveUsers((prevState) => [...prevState, user]);
   }
-  function addActiveUser_2(user, num) {
+  function addActiveUser_2(user) {
     const truUser = active.find((item) => item === user);
     if (truUser) return;
     editAllSum(+user.cost);
@@ -82,6 +83,7 @@ function App() {
   }
 
   const [showModal, setShowModal] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
   const [indexUserModal, setIndexUserModal] = useState(0);
 
   function handleOpenModal(id) {
@@ -89,9 +91,19 @@ function App() {
     setIndexUserModal(id - 1)
   }
 
+
+
+
+
+
+
   return (
     <Router>
       <div className="All">
+      {showModal2 && (
+        <DeliveryAdd setShowModal2={setShowModal2}
+        active={active}/>
+      )}
         <div className="nav">
           <img className="nav_img" src="../src/assets/logo.png" alt="" />
           <div className="mav_no_logo">
@@ -132,7 +144,7 @@ function App() {
             <p className="basket_all_cost_text">Итого</p>
             <p className="basket_all_cost">{allSum}р</p>
           </div>
-          <button className="delyvery_button">Оформить заказ</button>
+          <button onClick={()=>setShowModal2(true)} className="delyvery_button">Оформить заказ</button>
           <div className="delivery">
             <img src="../src/assets/Доставка.png" alt="" />
             <p className="delivery_text">Бесплатная доставка</p>
