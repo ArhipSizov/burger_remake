@@ -172,6 +172,8 @@ function App() {
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
+                editAllNum={editAllNum}
+                editAllSum={editAllSum}
               />
             }
           />
@@ -186,6 +188,8 @@ function App() {
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
+                editAllNum={editAllNum}
+                editAllSum={editAllSum}
               />
             }
           />

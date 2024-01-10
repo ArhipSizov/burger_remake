@@ -9,6 +9,8 @@ export default function Snacks({
     showModal,
     indexUserModal,
     setIndexUserModal,
+    editAllNum,
+    editAllSum,
     setShowModal
   }) {
   
@@ -23,6 +25,8 @@ export default function Snacks({
             item={allUsers[indexUserModal]}
             addActiveUser={addActiveUser}
             allUsers={allUsers}
+            editAllNum={editAllNum}
+            editAllSum={editAllSum}
           />
         )}
         <p className="name_of_menu">Закуски</p>
