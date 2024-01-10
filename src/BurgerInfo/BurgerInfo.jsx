@@ -6,12 +6,11 @@ export default function BurgerInfo({
   showModal,
   setIndexUserModal,
   addActiveUser,
-  handleOpenModal,
   editAllNum,
   editAllSum,
   setShowModal
 }) {
-console.log(item);
+
 
 const [num, setNum] = useState(1);
 const [sum, setSum] = useState(0);
@@ -73,7 +72,7 @@ setSum(result2)
             </div>
           </div>
           <div className="BurgerInfo_div_2">
-            <button onClick={()=>addActiveUser(item)} className="BurgerInfo_button">
+            <button onClick={()=>addActiveUser(item, num)} className="BurgerInfo_button">
               Добавить
             </button>
             <div className="num_of_burgers_div" onClick={(e)=>{e.stopPropagation()}} >

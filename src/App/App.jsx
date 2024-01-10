@@ -54,28 +54,22 @@ function App() {
   }
 
   function addActiveUser(user) {
-    console.log(user);
     const truUser = active.find((item) => item === user);
     if (truUser) return;
     editAllSum(+user.cost);
     editAllNum(+1);
     const lastid = active[active.length - 1].id;
     user.id = +lastid + 1;
-    console.log(lastid);
     setActiveUsers((prevState) => [...prevState, user]);
-    console.log(2121);
   }
   function addActiveUser_2(user, num) {
-    console.log(user);
     const truUser = active.find((item) => item === user);
     if (truUser) return;
     editAllSum(+user.cost);
     editAllNum(+1);
     const lastid = active[active.length - 1].id;
     user.id = +lastid + 1;
-    console.log(lastid);
     setActiveUsers((prevState) => [...prevState, user]);
-    console.log(2121);
   }
 
   function delCards(id) {
