@@ -49,7 +49,7 @@ setSum(result2)
             <img className="close_img" src="../src/assets/close.svg" alt="" />
           </div>
           <div className="BurgerInfo_footer">
-            <img src={item.img} alt="" />
+            <img className="BurgerInfo_img" src={item.img} alt="" />
             <div className="BurgerInfo_footer_div">
               <p>
                 Супер мясное наслаждение! Большая рубленая котлета из свежего

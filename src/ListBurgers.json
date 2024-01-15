@@ -152,5 +152,57 @@
         "id": "3",
         "id_false": "3"
     }
+  ],
+  "allVoks":[
+    {
+        "img": "../src/assets/Vok.png",
+        "name": "Вок классический",
+        "cost": "290",
+        "weight": "225",
+        "id": "1",
+        "id_false": "1"
+    },
+    {
+        "img": "../src/assets/VokCheese.png",
+        "name": "Сырный вок",
+        "cost": "390",
+        "weight": "370",
+        "id": "2",
+        "id_false": "2"
+    },
+    {
+        "img": "../src/assets/VokHot.png",
+        "name": "Острый вок",
+        "cost": "420",
+        "weight": "400",
+        "id": "3",
+        "id_false": "3"
+    }
+  ],
+  "allDesserts":[
+    {
+        "img": "../src/assets/DessertsSwedish.png",
+        "name": "Шведский",
+        "cost": "390",
+        "weight": "205",
+        "id": "1",
+        "id_false": "1"
+    },
+    {
+        "img": "../src/assets/DessertsBerryAndFruit.png",
+        "name": "Ягодный",
+        "cost": "410",
+        "weight": "200",
+        "id": "2",
+        "id_false": "2"
+    },
+    {
+        "img": "../src/assets/DessertsAir.png",
+        "name": "Воздушный",
+        "cost": "230",
+        "weight": "50",
+        "id": "3",
+        "id_false": "3"
+    }
   ]
 }

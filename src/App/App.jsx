@@ -8,6 +8,8 @@ import DeliveryAdd from "../DeliveryAdd/DeliveryAdd"
 import Burgers from "../Pages/Burgers/Burgers";
 import HotDogs from "../Pages/HotDogs/HotDogs";
 import Snacks from "../Pages/Snacks/Snacks";
+import Vok from "../Pages/Vok/Vok"
+import Desert from "../Pages/Dessert/Dessert"
 import Error from "../Pages/Error/Error";
 import {
   BrowserRouter as Router,
@@ -21,6 +23,8 @@ function App() {
   const arrCardsListBurgers = arrCard.allBurgers;
   const arrCardsListSnacks = arrCard.allSnacks;
   const arrCardsListHotDogs = arrCard.allHotDogs;
+  const arrCardsListVoks = arrCard.allVoks;
+  const arrCardsListDesserts = arrCard.allDesserts;
   const arrCardsActive = arrCard.activeUser;
   const [active, setActiveUsers] = useState(arrCardsActive);
 
@@ -40,6 +44,16 @@ function App() {
   }
 
   const [hotdogs, setAllUsersHotDogs] = useState(arrCardsListHotDogs);
+  if (!burgers) {
+    return <h1>Eror404</h1>;
+  }
+
+  const [voks, setAllUsersVoks] = useState(arrCardsListVoks);
+  if (!burgers) {
+    return <h1>Eror404</h1>;
+  }
+
+  const [desserts, setAllUsersDesserts] = useState(arrCardsListDesserts);
   if (!burgers) {
     return <h1>Eror404</h1>;
   }
@@ -188,6 +202,38 @@ function App() {
             element={
               <HotDogs
                 allUsers={hotdogs}
+                addActiveUser={addActiveUser}
+                showModal={showModal}
+                handleOpenModal={handleOpenModal}
+                indexUserModal={indexUserModal}
+                setIndexUserModal={setIndexUserModal}
+                setShowModal={setShowModal}
+                editAllNum={editAllNum}
+                editAllSum={editAllSum}
+              />
+            }
+          />
+          <Route
+            path="/wok"
+            element={
+              <Vok
+                allUsers={voks}
+                addActiveUser={addActiveUser}
+                showModal={showModal}
+                handleOpenModal={handleOpenModal}
+                indexUserModal={indexUserModal}
+                setIndexUserModal={setIndexUserModal}
+                setShowModal={setShowModal}
+                editAllNum={editAllNum}
+                editAllSum={editAllSum}
+              />
+            }
+          />
+          <Route
+            path="/dessert"
+            element={
+              <Desert
+                allUsers={desserts}
                 addActiveUser={addActiveUser}
                 showModal={showModal}
                 handleOpenModal={handleOpenModal}

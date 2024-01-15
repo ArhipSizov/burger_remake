@@ -7,6 +7,9 @@ export default function DeliveryAdd({setShowModal2, active}) {
     const [showModal3, setShowModal3] = useState(false);
 
 console.log(active);
+if (active.length == 1) {
+    setShowModal2(false)
+  } else {
     return (
         <div className="DeliveryAdd" onClick={()=>setShowModal2(false)}>
             <div className="DeliveryAdd_div" onClick={(e)=>{e.stopPropagation()}}>
@@ -32,5 +35,5 @@ console.log(active);
             </div>
             </div>
         </div>
-    )
+    )}
 }
