@@ -18,3 +18,23 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.input_div{
+    display: flex;
+    flex-direction: column;
+}
+.input_p{
+    text-align: center;
+}
+.input_button{
+    width: 100%;
+    cursor: pointer;
+    background-color:#FF5C00;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.input_all{
+    width: 40%;
+    border-radius:24px;
+    background-color:#F2F2F3;
+    padding: 10%;
+}

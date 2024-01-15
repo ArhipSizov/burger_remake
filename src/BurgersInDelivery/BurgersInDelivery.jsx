@@ -11,6 +11,7 @@ return(
         <p>{name}</p>
         <p>{cost}р</p>
         <p>{weight}г</p>
+        
     </div>
 )}
 }
