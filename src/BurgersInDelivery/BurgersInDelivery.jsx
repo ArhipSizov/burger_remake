@@ -1,7 +1,7 @@
 import "./BurgersInDelivery.css"
 
 export default function BurgersInDelivery({name,img,cost,weight}){
-console.log(name);
+
 if (name == undefined) {
     return;
   } else {

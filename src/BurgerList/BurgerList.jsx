@@ -7,7 +7,7 @@ export default function BurgerLists({
   addActiveUser, handleOpenModal, classN
 }) {
 
-console.log(classN);
+
 
   return (
     <div className="BurgerLists">

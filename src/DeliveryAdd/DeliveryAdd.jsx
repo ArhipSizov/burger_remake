@@ -6,7 +6,7 @@ export default function DeliveryAdd({setShowModal2, active}) {
 
     const [showModal3, setShowModal3] = useState(false);
 
-console.log(active);
+
 if (active.length == 1) {
     setShowModal2(false)
   } else {

@@ -3,14 +3,14 @@ import MenuBlock from "../Menu/Menu";
 import "./App.css";
 import arrCard from "../ListBurgers.json";
 import BurgerActive from "../BurgerActive/BurgerActive";
-import DeliveryAdd from "../DeliveryAdd/DeliveryAdd"
+import DeliveryAdd from "../DeliveryAdd/DeliveryAdd";
 
 import Burgers from "../Pages/Burgers/Burgers";
 import HotDogs from "../Pages/HotDogs/HotDogs";
 import Snacks from "../Pages/Snacks/Snacks";
-import Vok from "../Pages/Vok/Vok"
-import Desert from "../Pages/Dessert/Dessert"
-import Combo from "../Pages/Combo/Combo"
+import Vok from "../Pages/Vok/Vok";
+import Desert from "../Pages/Dessert/Dessert";
+import Combo from "../Pages/Combo/Combo";
 import Error from "../Pages/Error/Error";
 import {
   BrowserRouter as Router,
@@ -99,22 +99,24 @@ function App() {
 
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
+  const [showModal3, setShowModal3] = useState(false);
   const [indexUserModal, setIndexUserModal] = useState(0);
 
   function handleOpenModal(id) {
     setShowModal(true);
     setIndexUserModal(id - 1)
   }
-
-
-
-
-
-
+ function name() {
+  
+  if (allNum == 0) {
+    setShowModal3(false);
+  }else{
+    setShowModal3(true);
+  }}
 
   return (
     <Router>
-      <div className="All">
+      <div className="All" onClick={name}>
       {showModal2 && (
         <DeliveryAdd setShowModal2={setShowModal2}
         active={active}/>
@@ -139,11 +141,13 @@ function App() {
             <MenuBlock {...item} key={item.id} />
           ))}
         </div>
+        {showModal3 && (
         <div className="basket">
           <div className="basket_all_num_div">
             <p className="basket_all_num_text">Корзина</p>
             <div className="basket_all_num">{allNum}</div>
           </div>
+          
           <div className="active_burgers">
             {active.map((item) => (
               <BurgerActive
@@ -164,7 +168,8 @@ function App() {
             <img src="../src/assets/Доставка.png" alt="" />
             <p className="delivery_text">Бесплатная доставка</p>
           </div>
-        </div>
+        </div>    )}  
+        
         <Routes>
           <Route
             path="/"
