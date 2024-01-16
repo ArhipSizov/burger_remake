@@ -166,6 +166,10 @@
   margin-left: 30%;
   margin-bottom: 100px;
 }
+.basket_zero{
+  font-size: 16px;
+  margin-top: 16px;
+}
 @media(max-width: 1800px) {
   .nav{
     height: 580px;

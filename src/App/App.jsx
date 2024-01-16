@@ -106,17 +106,16 @@ function App() {
     setShowModal(true);
     setIndexUserModal(id - 1)
   }
- function name() {
-  
-  if (allNum == 0) {
+  setTimeout(function() {
+  if (active.length == 1) {
     setShowModal3(false);
   }else{
     setShowModal3(true);
-  }}
+  }}, 10)
 
   return (
     <Router>
-      <div className="All" onClick={name}>
+      <div className="All">
       {showModal2 && (
         <DeliveryAdd setShowModal2={setShowModal2}
         active={active}/>
@@ -141,13 +140,14 @@ function App() {
             <MenuBlock {...item} key={item.id} />
           ))}
         </div>
-        {showModal3 && (
+
         <div className="basket">
           <div className="basket_all_num_div">
             <p className="basket_all_num_text">Корзина</p>
             <div className="basket_all_num">{allNum}</div>
-          </div>
-          
+          </div>        
+          {showModal3 && (
+          <div>
           <div className="active_burgers">
             {active.map((item) => (
               <BurgerActive
@@ -167,8 +167,12 @@ function App() {
           <div className="delivery">
             <img src="../src/assets/Доставка.png" alt="" />
             <p className="delivery_text">Бесплатная доставка</p>
-          </div>
-        </div>    )}  
+          </div></div>)||(
+            <div>
+              <p className="basket_zero">Тут пока пусто :(</p>
+            </div>
+          )}  
+        </div>    
         
         <Routes>
           <Route
