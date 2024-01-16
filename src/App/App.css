@@ -92,8 +92,8 @@
   background-size: 100%;
   padding-left: 30%;
   padding-right: 30%;
-  margin-top: -5vh;
-  padding-top: 5vh;
+  margin-top: -50px;
+  padding-top: 50px;
   height: 650px;
 }
 .burger_logo{
@@ -170,6 +170,9 @@
   .nav{
     height: 580px;
   }
+  .BurgerInfo{
+    margin-top: -665px !important;
+  }
 }
 @media(max-width: 1650px) {
   .nav{
@@ -181,5 +184,8 @@
 @media(max-width: 1440px) {
   .nav{
     height: 470px;
+  }
+  .BurgerInfo{
+    margin-top: -595px !important;
   }
 }
