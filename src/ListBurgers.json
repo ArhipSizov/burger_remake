@@ -8,7 +8,7 @@
     {
       "img": "../src/assets/Вок.png",
       "text": "Вок",
-      "link": "wok"
+      "link": "vok"
     },
     {
       "img": "../src/assets/Десерты.png",
@@ -201,6 +201,40 @@
         "name": "Воздушный",
         "cost": "230",
         "weight": "50",
+        "id": "3",
+        "id_false": "3"
+    }
+  ],
+  "allShawarmas":[
+    {
+        "img": "../src/assets/ShawarmaClassic.png",
+        "name": "Классическая",
+        "cost": "200",
+        "weight": "300",
+        "id": "1",
+        "id_false": "1"
+    },
+    {
+        "img": "../src/assets/ShawarmaHot.png",
+        "name": "Острая",
+        "cost": "360",
+        "weight": "400",
+        "id": "2",
+        "id_false": "2"
+    },
+    {
+        "img": "../src/assets/ShawarmaChicken.png",
+        "name": "Куриная",
+        "cost": "439",
+        "weight": "495",
+        "id": "3",
+        "id_false": "3"
+    },
+    {
+        "img": "../src/assets/ShawarmaCheese.png",
+        "name": "Сырная",
+        "cost": "220",
+        "weight": "290",
         "id": "3",
         "id_false": "3"
     }

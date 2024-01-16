@@ -10,6 +10,7 @@ import HotDogs from "../Pages/HotDogs/HotDogs";
 import Snacks from "../Pages/Snacks/Snacks";
 import Vok from "../Pages/Vok/Vok";
 import Desert from "../Pages/Dessert/Dessert";
+import Shawarma from "../Pages/Shawarma/Shawarma"
 import Combo from "../Pages/Combo/Combo";
 import Error from "../Pages/Error/Error";
 import {
@@ -26,6 +27,7 @@ function App() {
   const arrCardsListHotDogs = arrCard.allHotDogs;
   const arrCardsListVoks = arrCard.allVoks;
   const arrCardsListDesserts = arrCard.allDesserts;
+  const arrCardsListShawarmas = arrCard.allShawarmas;
   const arrCardsActive = arrCard.activeUser;
   const [active, setActiveUsers] = useState(arrCardsActive);
 
@@ -55,6 +57,11 @@ function App() {
   }
 
   const [desserts, setAllUsersDesserts] = useState(arrCardsListDesserts);
+  if (!burgers) {
+    return <h1>Eror404</h1>;
+  }
+
+  const [shawarmas, setAllUsersShawarmas] = useState(arrCardsListShawarmas);
   if (!burgers) {
     return <h1>Eror404</h1>;
   }
@@ -224,7 +231,7 @@ function App() {
             }
           />
           <Route
-            path="/wok"
+            path="/vok"
             element={
               <Vok
                 allUsers={voks}
@@ -244,6 +251,22 @@ function App() {
             element={
               <Desert
                 allUsers={desserts}
+                addActiveUser={addActiveUser}
+                showModal={showModal}
+                handleOpenModal={handleOpenModal}
+                indexUserModal={indexUserModal}
+                setIndexUserModal={setIndexUserModal}
+                setShowModal={setShowModal}
+                editAllNum={editAllNum}
+                editAllSum={editAllSum}
+              />
+            }
+          />
+                    <Route
+            path="/shawarma"
+            element={
+              <Shawarma
+                allUsers={shawarmas}
                 addActiveUser={addActiveUser}
                 showModal={showModal}
                 handleOpenModal={handleOpenModal}
