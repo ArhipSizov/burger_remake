@@ -10,6 +10,7 @@ import HotDogs from "../Pages/HotDogs/HotDogs";
 import Snacks from "../Pages/Snacks/Snacks";
 import Vok from "../Pages/Vok/Vok"
 import Desert from "../Pages/Dessert/Dessert"
+import Combo from "../Pages/Combo/Combo"
 import Error from "../Pages/Error/Error";
 import {
   BrowserRouter as Router,
@@ -246,6 +247,7 @@ function App() {
             }
           />
           <Route path="*" element={<Error />} />
+          <Route path="/combo" element={<Combo />} />
         </Routes>
         <div className="footer">
           <div className="left_footer">

@@ -32,6 +32,7 @@ export default function Burgers({
       <p className="name_of_menu">Бургеры</p>
       <div className="menu_of_burgers">
         <BurgerList
+          classN="allUsers"
           allUsers={allUsers}
           addActiveUser={addActiveUser}
           showModal={showModal}

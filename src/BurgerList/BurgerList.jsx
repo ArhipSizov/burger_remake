@@ -1,20 +1,19 @@
 import "./BurgerList.css";
 import { v4 as uuidv4 } from "uuid";
-import BurgerInfo from "../BurgerInfo/BurgerInfo"
 
 
 export default function BurgerLists({
   allUsers,
-  addActiveUser, handleOpenModal
+  addActiveUser, handleOpenModal, classN
 }) {
 
-
+console.log(classN);
 
   return (
     <div className="BurgerLists">
       {allUsers.map((item) => (
         <div
-          className="allUsers"
+          className={classN}
           key={uuidv4()}
 
           

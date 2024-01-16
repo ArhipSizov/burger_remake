@@ -1,0 +1,15 @@
+.Vok{
+    padding: 10px;
+    display: block;
+    width: 30%;
+    background: #FFFFFF;
+    margin-bottom: 30px;
+    border-radius:18px;
+    height: 475px;
+}
+@media(max-width: 1440px) {
+    .Vok{
+        display: block;
+        width: 40%;
+    }
+}

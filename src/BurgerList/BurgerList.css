@@ -5,7 +5,7 @@
     background: #FFFFFF;
     margin-bottom: 30px;
     border-radius:18px;
-    height: 370px;
+    height: 415px;
 }
 .BurgerLists_button{
     background: #F2F2F3;
@@ -31,7 +31,7 @@
     width: 100%;
 }
 
-@media(max-width: 1435px) {
+@media(max-width: 1440px) {
     .allUsers{
         display: block;
         width: 40%;
