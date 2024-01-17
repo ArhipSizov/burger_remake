@@ -307,16 +307,16 @@ function App() {
           <div className="right_footer">
             <p className="right_footer_p">Мы в соцсетях</p>
             <div className="right_footer_div">
-              <img
+            <a href="https://vk.com/"><img
                 className="right_footer_WK"
                 src="../src/assets/WK.png"
                 alt=""
-              />
-              <img
+              /></a>
+              <a href="https://web.telegram.org/a/"><img
                 className="right_footer_telegram"
                 src="../src/assets/telegram.png"
                 alt=""
-              />
+              /></a>
             </div>
           </div>
         </div>
