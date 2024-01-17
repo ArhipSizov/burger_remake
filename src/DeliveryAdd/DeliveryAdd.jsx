@@ -69,6 +69,7 @@ export default function DeliveryAdd({ setShowModal2, active }) {
                 <option>ул. Уральская д. 6</option>
               </select>
             )}
+            <input type="text" placeholder="Введите данные карты"/>
             <div className="input_button">Оформить</div>
           </div>
         </div>
