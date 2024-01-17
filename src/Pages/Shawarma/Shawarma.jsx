@@ -31,7 +31,7 @@ export default function Shawarma({
         )}
         <p className="name_of_menu">Закуски</p>
         <div className="menu_of_burgers">
-          <BurgerList classN="Shawarma"
+          <BurgerList classN="allUsersAlt"
             allUsers={allUsers}
             addActiveUser={addActiveUser}
             showModal={showModal}

@@ -57,7 +57,7 @@
   margin-top: 16px;
 }
 .delyvery_button{
-  background: #FF7020;
+  background: #FFAB08;
   color: #ffffff;
   border:none;
   font-family: 'Nunito', sans-serif;
@@ -68,6 +68,12 @@
   cursor: pointer;
   margin-top: 24px;
   margin-bottom: 8px;
+  transition: all  0.2s;
+}
+.delyvery_button:hover{
+  background: #FF7020;
+  transition: all  0.2s ;
+  transform: scale(1.05);
 }
 .menu_of_burgers, .BurgerLists{
   display: flex;

@@ -31,7 +31,7 @@ export default function Vok({
         )}
         <p className="name_of_menu">Закуски</p>
         <div className="menu_of_burgers">
-          <BurgerList classN="Vok"
+          <BurgerList classN="allUsersAlt"
             allUsers={allUsers}
             addActiveUser={addActiveUser}
             showModal={showModal}
