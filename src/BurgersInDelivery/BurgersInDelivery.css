@@ -1,5 +1,5 @@
 .BurgersInDelivery_img{
-    width: 220px;
+    height: 175px;
 }
 .BurgersInDelivery_p{
     margin-bottom: 5px;
@@ -13,7 +13,7 @@
 }
 @media(max-width: 1650px) {
     .BurgersInDelivery_img{
-        width: 180px;
+        height: 143.5px;
     }
     .DeliveryAdd_div{
       height: 63vh;
