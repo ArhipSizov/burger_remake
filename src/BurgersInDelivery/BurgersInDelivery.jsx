@@ -1,16 +1,14 @@
 import "./BurgersInDelivery.css"
 
-export default function BurgersInDelivery({name,img,cost,weight}){
+export default function BurgersInDelivery({name,img,cost}){
 
 if (name == undefined) {
     return;
   } else {
 return(
-    <div>
+    <div className="BurgersInDelivery_div">
         <img className="BurgersInDelivery_img" src={img} alt="" />
-        <p>{name}</p>
-        <p>{cost}р</p>
-        <p>{weight}г</p>
+        <p className="BurgersInDelivery_p">{name}</p>
         
     </div>
 )}

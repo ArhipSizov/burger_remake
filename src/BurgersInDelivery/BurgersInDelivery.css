@@ -1,3 +1,25 @@
 .BurgersInDelivery_img{
-    width: 80%;
+    width: 220px;
+}
+.BurgersInDelivery_p{
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.BurgersInDelivery_div{
+    background-color:#F2F2F3;;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    height: 210px;
+}
+@media(max-width: 1650px) {
+    .BurgersInDelivery_img{
+        width: 180px;
+    }
+    .DeliveryAdd_div{
+      height: 63vh;
+      margin-top: 18.5vh;
+    }
+    .BurgersInDelivery_div{
+        height: 175px;
+    }
 }
