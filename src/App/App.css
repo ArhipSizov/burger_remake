@@ -196,3 +196,9 @@
     margin-top: -595px !important;
   }
 }
+@media(max-width: 1350px) {
+  .burger_logo{
+    width: 280px;
+    height: 280px;
+  }
+}
