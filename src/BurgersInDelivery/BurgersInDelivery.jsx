@@ -1,6 +1,6 @@
 import "./BurgersInDelivery.css"
 
-export default function BurgersInDelivery({name,img,cost}){
+export default function BurgersInDelivery({name,img}){
 
 if (name == undefined) {
     return;
