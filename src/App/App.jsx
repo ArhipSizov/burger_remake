@@ -6,11 +6,6 @@ import BurgerActive from "../BurgerActive/BurgerActive";
 import DeliveryAdd from "../DeliveryAdd/DeliveryAdd";
 
 import AllUsers from "../Pages/AllUsers/AllUsers";
-import HotDogs from "../Pages/HotDogs/HotDogs";
-import Snacks from "../Pages/Snacks/Snacks";
-import AllUsersAlt from "../Pages/AllUsersAlt/AllUsersAlt";
-import Desert from "../Pages/Dessert/Dessert";
-import Shawarma from "../Pages/Shawarma/Shawarma"
 import Combo from "../Pages/Combo/Combo";
 import Error from "../Pages/Error/Error";
 import {
@@ -193,8 +188,6 @@ function App() {
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
-                editAllNum={editAllNum}
-                editAllSum={editAllSum}
                 classN="AllUsers"
               />
             }
@@ -210,8 +203,6 @@ function App() {
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
-                editAllNum={editAllNum}
-                editAllSum={editAllSum}
                 classN="AllUsers"
               />
             }
@@ -227,8 +218,6 @@ function App() {
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
-                editAllNum={editAllNum}
-                editAllSum={editAllSum}
                 classN="AllUsers"
               />
             }
@@ -244,8 +233,6 @@ function App() {
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
-                editAllNum={editAllNum}
-                editAllSum={editAllSum}
                 classN="AllUsersAlt"
               />
             }
@@ -261,8 +248,6 @@ function App() {
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
-                editAllNum={editAllNum}
-                editAllSum={editAllSum}
                 classN="AllUsersAlt"
               />
             }
@@ -278,8 +263,6 @@ function App() {
                 indexUserModal={indexUserModal}
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
-                editAllNum={editAllNum}
-                editAllSum={editAllSum}
                 classN="AllUsersAlt"
               />
             }

@@ -9,8 +9,6 @@ export default function AllUsers({
   showModal,
   indexUserModal,
   setIndexUserModal,
-  editAllNum,
-  editAllSum,
   setShowModal,
   classN
 }) {
@@ -26,8 +24,6 @@ export default function AllUsers({
           item={allUsers[indexUserModal]}
           addActiveUser={addActiveUser}
           allUsers={allUsers}
-          editAllNum={editAllNum}
-          editAllSum={editAllSum}
         />
       )}
       <p className="name_of_menu">Бургеры</p>
