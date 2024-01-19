@@ -5,10 +5,10 @@ import arrCard from "../ListBurgers.json";
 import BurgerActive from "../BurgerActive/BurgerActive";
 import DeliveryAdd from "../DeliveryAdd/DeliveryAdd";
 
-import Burgers from "../Pages/Burgers/Burgers";
+import AllUsers from "../Pages/AllUsers/AllUsers";
 import HotDogs from "../Pages/HotDogs/HotDogs";
 import Snacks from "../Pages/Snacks/Snacks";
-import Vok from "../Pages/Vok/Vok";
+import AllUsersAlt from "../Pages/AllUsersAlt/AllUsersAlt";
 import Desert from "../Pages/Dessert/Dessert";
 import Shawarma from "../Pages/Shawarma/Shawarma"
 import Combo from "../Pages/Combo/Combo";
@@ -185,7 +185,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Burgers
+              <AllUsers
                 allUsers={burgers}
                 addActiveUser={addActiveUser_2}
                 showModal={showModal}
@@ -195,13 +195,14 @@ function App() {
                 setShowModal={setShowModal}
                 editAllNum={editAllNum}
                 editAllSum={editAllSum}
+                classN="AllUsers"
               />
             }
           />
           <Route
             path="/snacks"
             element={
-              <Snacks
+              <AllUsers
                 allUsers={snacks}
                 addActiveUser={addActiveUser}
                 showModal={showModal}
@@ -211,13 +212,14 @@ function App() {
                 setShowModal={setShowModal}
                 editAllNum={editAllNum}
                 editAllSum={editAllSum}
+                classN="AllUsers"
               />
             }
           />
           <Route
             path="/hotdogs"
             element={
-              <HotDogs
+              <AllUsers
                 allUsers={hotdogs}
                 addActiveUser={addActiveUser}
                 showModal={showModal}
@@ -227,13 +229,14 @@ function App() {
                 setShowModal={setShowModal}
                 editAllNum={editAllNum}
                 editAllSum={editAllSum}
+                classN="AllUsers"
               />
             }
           />
           <Route
             path="/vok"
             element={
-              <Vok
+              <AllUsers
                 allUsers={voks}
                 addActiveUser={addActiveUser}
                 showModal={showModal}
@@ -243,13 +246,14 @@ function App() {
                 setShowModal={setShowModal}
                 editAllNum={editAllNum}
                 editAllSum={editAllSum}
+                classN="AllUsersAlt"
               />
             }
           />
           <Route
             path="/dessert"
             element={
-              <Desert
+              <AllUsers
                 allUsers={desserts}
                 addActiveUser={addActiveUser}
                 showModal={showModal}
@@ -259,13 +263,14 @@ function App() {
                 setShowModal={setShowModal}
                 editAllNum={editAllNum}
                 editAllSum={editAllSum}
+                classN="AllUsersAlt"
               />
             }
           />
                     <Route
             path="/shawarma"
             element={
-              <Shawarma
+              <AllUsers
                 allUsers={shawarmas}
                 addActiveUser={addActiveUser}
                 showModal={showModal}
@@ -275,6 +280,7 @@ function App() {
                 setShowModal={setShowModal}
                 editAllNum={editAllNum}
                 editAllSum={editAllSum}
+                classN="AllUsersAlt"
               />
             }
           />

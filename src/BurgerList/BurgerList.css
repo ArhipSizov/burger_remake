@@ -1,4 +1,4 @@
-.allUsers,.allUsersAlt{
+.AllUsers,.AllUsersAlt{
     padding: 10px;
     display: block;
     width: 30%;
@@ -8,7 +8,7 @@
     height: 415px;
     cursor: pointer;
 }
-.allUsersAlt{
+.AllUsersAlt{
     height: 475px;
 }
 .BurgerLists_button{
@@ -43,7 +43,7 @@
 }
 
 @media(max-width: 1440px) {
-    .allUsers, .allUsersAlt{
+    .AllUsers, .AllUsersAlt{
         display: block;
         width: 40%;
     }

@@ -1,8 +1,8 @@
-import "./Burgers.css";
+import "./AllUsers.css";
 import BurgerList from "../../BurgerList/BurgerList";
 import BurgerInfo from "../../BurgerInfo/BurgerInfo";
 
-export default function Burgers({
+export default function AllUsers({
   allUsers,
   addActiveUser,
   handleOpenModal,
@@ -11,7 +11,8 @@ export default function Burgers({
   setIndexUserModal,
   editAllNum,
   editAllSum,
-  setShowModal
+  setShowModal,
+  classN
 }) {
 
 
@@ -32,7 +33,7 @@ export default function Burgers({
       <p className="name_of_menu">Бургеры</p>
       <div className="menu_of_burgers">
         <BurgerList
-          classN="allUsers"
+          classN={classN}
           allUsers={allUsers}
           addActiveUser={addActiveUser}
           showModal={showModal}
