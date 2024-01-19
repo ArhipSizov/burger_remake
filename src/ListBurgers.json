@@ -235,8 +235,68 @@
         "name": "Сырная",
         "cost": "220",
         "weight": "290",
+        "id": "4",
+        "id_false": "4"
+    }
+  ],
+  "allPizzas":[
+    {
+        "img": "../src/assets/fermerskaya.png",
+        "name": "Фермерская",
+        "cost": "620",
+        "weight": "790",
+        "id": "1",
+        "id_false": "1"
+    },
+    {
+        "img": "../src/assets/gavayskaya.png",
+        "name": "Гавайская",
+        "cost": "745",
+        "weight": "855",
+        "id": "2",
+        "id_false": "2"
+    },
+    {
+        "img": "../src/assets/pepperoni.png",
+        "name": "Пепперони",
+        "cost": "999",
+        "weight": "1200",
         "id": "3",
         "id_false": "3"
+    }
+  ],
+  "allSauces":[
+    {
+        "img": "../src/assets/Tomato.png",
+        "name": "Томатный",
+        "cost": "50",
+        "weight": "30",
+        "id": "1",
+        "id_false": "1"
+    },
+    {
+        "img": "../src/assets/Garlic.png",
+        "name": "Чесночный",
+        "cost": "45",
+        "weight": "20",
+        "id": "2",
+        "id_false": "2"
+    },
+    {
+        "img": "../src/assets/Pesto.png",
+        "name": "Песто",
+        "cost": "49",
+        "weight": "25",
+        "id": "3",
+        "id_false": "3"
+    },
+    {
+        "img": "../src/assets/Cheese.png",
+        "name": "Сырный",
+        "cost": "40",
+        "weight": "20",
+        "id": "4",
+        "id_false": "4"
     }
   ]
 }

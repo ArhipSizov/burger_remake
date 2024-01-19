@@ -23,6 +23,8 @@ function App() {
   const arrCardsListVoks = arrCard.allVoks;
   const arrCardsListDesserts = arrCard.allDesserts;
   const arrCardsListShawarmas = arrCard.allShawarmas;
+  const arrCardsListPizzas = arrCard.allPizzas;
+  const arrCardsListSauces = arrCard.allSauces;
   const arrCardsActive = arrCard.activeUser;
   const [active, setActiveUsers] = useState(arrCardsActive);
 
@@ -57,6 +59,16 @@ function App() {
   }
 
   const [shawarmas, setAllUsersShawarmas] = useState(arrCardsListShawarmas);
+  if (!burgers) {
+    return <h1>Eror404</h1>;
+  }
+
+  const [pizzas, setAllUsersPizzas] = useState(arrCardsListPizzas);
+  if (!burgers) {
+    return <h1>Eror404</h1>;
+  }
+
+  const [sauces, setAllUsersSauces] = useState(arrCardsListSauces);
   if (!burgers) {
     return <h1>Eror404</h1>;
   }
@@ -252,11 +264,41 @@ function App() {
               />
             }
           />
-                    <Route
+          <Route
             path="/shawarma"
             element={
               <AllUsers
                 allUsers={shawarmas}
+                addActiveUser={addActiveUser}
+                showModal={showModal}
+                handleOpenModal={handleOpenModal}
+                indexUserModal={indexUserModal}
+                setIndexUserModal={setIndexUserModal}
+                setShowModal={setShowModal}
+                classN="AllUsersAlt"
+              />
+            }
+          />
+          <Route
+            path="/pizza"
+            element={
+              <AllUsers
+                allUsers={pizzas}
+                addActiveUser={addActiveUser}
+                showModal={showModal}
+                handleOpenModal={handleOpenModal}
+                indexUserModal={indexUserModal}
+                setIndexUserModal={setIndexUserModal}
+                setShowModal={setShowModal}
+                classN="AllUsersAlt"
+              />
+            }
+          />
+          <Route
+            path="/sauces"
+            element={
+              <AllUsers
+                allUsers={sauces}
                 addActiveUser={addActiveUser}
                 showModal={showModal}
                 handleOpenModal={handleOpenModal}
