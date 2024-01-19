@@ -8,7 +8,6 @@ export default function BurgerInfo({
 }) {
 
 
-
   return (
     showModal && (
       <div className="BurgerInfo" onClick={()=>setShowModal(false)}>
