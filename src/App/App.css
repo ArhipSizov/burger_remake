@@ -230,3 +230,26 @@
     padding-left: 2%;
   }
 }
+@media(max-width: 1000px) {
+  .main{
+    display: block;
+    width: 940px;
+  }
+  .main2{
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    height: 100px;
+
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main2::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+  /* .main2::-webkit-scrollbar { width: 0; } */
+
+}

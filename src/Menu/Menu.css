@@ -3,16 +3,17 @@
     text-decoration: none;
     border-radius:13px;
     padding: 5px;
+    padding-top: 0;
     background:rgb(255,255,255);
     transition: 0.2s linear;
 }
 .menu_img{
-    position: absolute;
-    margin-top: -4px;
+    position: relative;
+    top: 5px;
 }
 .menu_text{
     display: inline;
-    margin-left: 30px;
+    margin-left: 5px;
 }
 .menu_div2{
     display: inline;
@@ -25,3 +26,9 @@
     background: #FFAB08;
     color:rgb(255, 255, 255);
 }
+@media(max-width: 1000px) {
+    .menu_div{
+        margin-left: 10px;
+        padding-top: 6.5px;
+    }
+  }

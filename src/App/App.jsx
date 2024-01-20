@@ -149,10 +149,12 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="main2">
         <div className="main">
           {menu.map((item) => (
             <MenuBlock {...item} key={item.id} />
           ))}
+        </div>
         </div>
 
         <div className="basket">
