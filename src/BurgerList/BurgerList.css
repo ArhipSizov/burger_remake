@@ -44,7 +44,11 @@
 
 @media(max-width: 1440px) {
     .AllUsers, .AllUsersAlt{
-        display: block;
         width: 40%;
+    }
+}
+@media(max-width: 1300px) {
+    .AllUsers, .AllUsersAlt{
+        width: 48%;
     }
 }
