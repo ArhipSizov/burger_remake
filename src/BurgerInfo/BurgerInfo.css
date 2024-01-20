@@ -19,6 +19,7 @@
   position: absolute;
   margin-left: 45%;
   margin-top: -70px;
+  cursor: pointer;
 }
 .BurgerInfo_name {
   font-size: 40px;
@@ -61,6 +62,11 @@
 }
 @media (max-width: 1800px) {
   .BurgerInfo {
+    margin-top: -655px;
+  }
+}
+@media (max-width: 1650px) {
+  .BurgerInfo {
     margin-top: -665px;
   }
 }
@@ -71,13 +77,13 @@
 }
 @media (max-width: 1300px) {
   .BurgerInfo {
-    margin-top: -652px;
+    margin-top: -655px;
     margin-left: -38%;
   }
 }
 @media (max-width: 1100px) {
     .BurgerInfo {
-      margin-top: -572px;
+      margin-top: -575px;
       margin-left: -35.6%;
     }
     .BurgerInfo_div {

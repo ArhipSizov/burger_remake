@@ -187,9 +187,6 @@
     padding-top: 0;
     height: 540px;
   }
-  .DeliveryAdd{
-    margin-top: 0 !important;
-  }
 }
 @media(max-width: 1440px) {
   .nav{
@@ -239,17 +236,13 @@
     width: 100%;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    height: 100px;
-
+    height: 75px;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
 .main2::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
-  /* .main2::-webkit-scrollbar { width: 0; } */
-
 }
