@@ -203,6 +203,7 @@ function App() {
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
                 classN="AllUsers"
+                pN="Бургеры"
               />
             }
           />
@@ -218,6 +219,7 @@ function App() {
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
                 classN="AllUsers"
+                pN="Закуски"
               />
             }
           />
@@ -233,6 +235,7 @@ function App() {
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
                 classN="AllUsers"
+                pN="Хот-доги"
               />
             }
           />
@@ -248,6 +251,7 @@ function App() {
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
                 classN="AllUsersAlt"
+                pN="Воки"
               />
             }
           />
@@ -263,6 +267,7 @@ function App() {
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
                 classN="AllUsersAlt"
+                pN="Десерты"
               />
             }
           />
@@ -278,6 +283,7 @@ function App() {
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
                 classN="AllUsersAlt"
+                pN="Шаурмы"
               />
             }
           />
@@ -293,6 +299,7 @@ function App() {
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
                 classN="AllUsersAlt"
+                pN="Пиццы"
               />
             }
           />
@@ -308,6 +315,7 @@ function App() {
                 setIndexUserModal={setIndexUserModal}
                 setShowModal={setShowModal}
                 classN="AllUsersAlt"
+                pN="Соусы"
               />
             }
           />

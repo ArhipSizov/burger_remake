@@ -10,7 +10,8 @@ export default function AllUsers({
   indexUserModal,
   setIndexUserModal,
   setShowModal,
-  classN
+  classN,
+  pN
 }) {
 
 
@@ -26,7 +27,7 @@ export default function AllUsers({
           allUsers={allUsers}
         />
       )}
-      <p className="name_of_menu">Бургеры</p>
+      <p className="name_of_menu">{pN}</p>
       <div className="menu_of_burgers">
         <BurgerList
           classN={classN}
