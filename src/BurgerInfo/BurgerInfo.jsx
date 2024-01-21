@@ -4,13 +4,11 @@ export default function BurgerInfo({
   item,
   showModal,
   addActiveUser,
-  setShowModal
+  setShowModal,
 }) {
-
-
   return (
     showModal && (
-      <div className="BurgerInfo" onClick={()=>setShowModal(false)}>
+      <div className="BurgerInfo" onClick={() => setShowModal(false)}>
         <div className="BurgerInfo_div">
           <div>
             <p className="BurgerInfo_name">{item.name}</p>
@@ -19,11 +17,7 @@ export default function BurgerInfo({
           <div className="BurgerInfo_footer">
             <img className="BurgerInfo_img" src={item.img} alt="" />
             <div className="BurgerInfo_footer_div">
-              <p>
-                Супер мясное наслаждение! Большая рубленая котлета из свежего
-                говяжего мяса покорит вас своей сочностью, а хрустящие листья
-                салата добавят свежести.
-              </p>
+              <p>{item.description}</p>
               <div>
                 <p>Состав:</p>
                 <p>Пшеничная булочка</p>
@@ -39,7 +33,10 @@ export default function BurgerInfo({
             </div>
           </div>
           <div className="BurgerInfo_div_2">
-            <button onClick={()=>addActiveUser(item)} className="BurgerInfo_button">
+            <button
+              onClick={() => addActiveUser(item)}
+              className="BurgerInfo_button"
+            >
               Добавить
             </button>
             <p>{item.cost}р</p>
