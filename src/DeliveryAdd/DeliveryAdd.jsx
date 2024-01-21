@@ -5,12 +5,25 @@ import BurgersInDelivery from "../BurgersInDelivery/BurgersInDelivery";
 export default function DeliveryAdd({ setShowModal2, active }) {
   const [showModal3, setShowModal3] = useState(false);
   const [showModal4, setShowModal4] = useState(true);
+  const [showModal5, setShowModal5] = useState(false);
+
+  const [deliveryCost, setDeliveryCost] = useState(0);
 
   if (active.length == 1) {
     setShowModal2(false);
   } else {
     return (
       <div className="DeliveryAdd" onClick={() => setShowModal2(false)}>
+        {showModal5 && (
+          <div
+            onClick={() => {
+              setShowModal5(false);
+            }}
+            className="DeliveryAdd_and"
+          >
+            <p>Спасибо за покупку!</p>
+          </div>
+        )}
         <div
           className="DeliveryAdd_div"
           onClick={(e) => {
@@ -19,7 +32,7 @@ export default function DeliveryAdd({ setShowModal2, active }) {
         >
           <div className="DeliveryAdd_div_2">
             {active.map((item) => (
-              <BurgersInDelivery {...item} key={item.id} />
+              <BurgersInDelivery {...item} key={item.id} deliveryCost={deliveryCost}/>
             ))}
           </div>
           <div className="input_all">
@@ -69,8 +82,13 @@ export default function DeliveryAdd({ setShowModal2, active }) {
                 <option>ул. Уральская д. 6</option>
               </select>
             )}
-            <input type="text" placeholder="Введите данные карты"/>
-            <div className="input_button">Оформить</div>
+            <p>Стоимость: {deliveryCost}р</p>
+            <input type="text" placeholder="Введите данные карты" />
+            <div
+                        onClick={() => {
+                          setShowModal5(true);
+                        }}
+             className="input_button">Оформить</div>
           </div>
         </div>
       </div>

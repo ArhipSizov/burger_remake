@@ -113,6 +113,17 @@ input[type="radio"]::before {
     border: none;
     margin-bottom: 5px;
 }
+.DeliveryAdd_and{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  font-size: 60px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 42vh;
+  z-index: 11;
+}
 @media(max-width: 1650px) {
   .DeliveryAdd{
     margin-top: 0;
