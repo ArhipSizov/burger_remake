@@ -2,12 +2,10 @@ import "./DeliveryAdd.css";
 import { useState } from "react";
 import BurgersInDelivery from "../BurgersInDelivery/BurgersInDelivery";
 
-export default function DeliveryAdd({ setShowModal2, active }) {
+export default function DeliveryAdd({ setShowModal2, active, allSum }) {
   const [showModal3, setShowModal3] = useState(false);
   const [showModal4, setShowModal4] = useState(true);
   const [showModal5, setShowModal5] = useState(false);
-
-  const [deliveryCost, setDeliveryCost] = useState(0);
 
   if (active.length == 1) {
     setShowModal2(false);
@@ -32,7 +30,7 @@ export default function DeliveryAdd({ setShowModal2, active }) {
         >
           <div className="DeliveryAdd_div_2">
             {active.map((item) => (
-              <BurgersInDelivery {...item} key={item.id} deliveryCost={deliveryCost}/>
+              <BurgersInDelivery {...item} key={item.id}/>
             ))}
           </div>
           <div className="input_all">
@@ -82,7 +80,7 @@ export default function DeliveryAdd({ setShowModal2, active }) {
                 <option>ул. Уральская д. 6</option>
               </select>
             )}
-            <p>Стоимость: {deliveryCost}р</p>
+            <p>Стоимость: {allSum}р</p>
             <input type="text" placeholder="Введите данные карты" />
             <div
                         onClick={() => {

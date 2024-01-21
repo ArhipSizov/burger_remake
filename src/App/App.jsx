@@ -132,6 +132,7 @@ function App() {
       <div className="All">
       {showModal2 && (
         <DeliveryAdd setShowModal2={setShowModal2}
+        allSum={allSum}
         active={active}/>
       )}
         <div className="nav">

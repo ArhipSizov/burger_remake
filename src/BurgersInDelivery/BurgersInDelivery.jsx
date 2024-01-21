@@ -1,14 +1,7 @@
 import "./BurgersInDelivery.css"
 
-export default function BurgersInDelivery({name,img,cost,deliveryCost}){
+export default function BurgersInDelivery({name,img}){
 
-console.log(cost);
-function name2() {
-    console.log(2312);
-    deliveryCost = +deliveryCost + +cost
-    console.log(deliveryCost);
-}
-name2()
 if (name == undefined) {
     return;
   } else {
