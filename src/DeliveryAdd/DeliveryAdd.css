@@ -113,6 +113,21 @@ input[type="radio"]::before {
     border: none;
     margin-bottom: 5px;
 }
+.select_delivery::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+
+.select_delivery::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #FFAB08;
+}
+
+.select_delivery::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
 .DeliveryAdd_and{
   position: absolute;
   text-align: center;
