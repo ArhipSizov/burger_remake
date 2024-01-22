@@ -6,6 +6,7 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
   const [showModal3, setShowModal3] = useState(false);
   const [showModal4, setShowModal4] = useState(true);
   const [showModal5, setShowModal5] = useState(false);
+  const [showModal6, setShowModal6] = useState(false);
 
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
@@ -17,16 +18,15 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
 
   function setShowModal5_f() {
     if (input1 == "" || input2 == "" || input3 == "") {
-      console.log();
-    }
-    else{
+      setShowModal6(true)
+    } else {
       if (input21 == "" || input22 == "" || input23 == "") {
         if (input11 == "") {
-          console.log();
-        }else{
+          setShowModal6(true)
+        } else {
           setShowModal5(true);
         }
-      }else{
+      } else {
         setShowModal5(true);
       }
     }
@@ -149,6 +149,7 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
               type="text"
               placeholder="Введите данные карты"
             />
+            {showModal6 && <p className="Eror_delivery">Заполните все колонки!</p>}
             <div
               onClick={() => {
                 setShowModal5_f();

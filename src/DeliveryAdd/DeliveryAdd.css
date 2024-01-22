@@ -139,6 +139,11 @@ input[type="radio"]::before {
   padding-top: 42vh;
   z-index: 11;
 }
+.Eror_delivery{
+  font-weight: 600;
+  font-size: 24px;
+  color: #ff0000;
+}
 @media(max-width: 1650px) {
   .DeliveryAdd{
     margin-top: 0;
