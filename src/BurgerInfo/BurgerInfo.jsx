@@ -1,4 +1,6 @@
 import "./BurgerInfo.css";
+import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
 
 export default function BurgerInfo({
   item,
@@ -6,6 +8,9 @@ export default function BurgerInfo({
   addActiveUser,
   setShowModal,
 }) {
+  const allCompound = item.compound;
+  const [compound, setAllUsersCompound] = useState(allCompound);
+
   return (
     showModal && (
       <div className="BurgerInfo" onClick={() => setShowModal(false)}>
@@ -20,11 +25,13 @@ export default function BurgerInfo({
               <p>{item.description}</p>
               <div>
                 <p>Состав:</p>
-                <p>Пшеничная булочка</p>
-                <p>Котлета из говядины</p>
-                <p>Красный лук</p>
-                <p>Листья салата</p>
-                <p>Соус горчичный</p>
+                <div className="compound_div">
+                  {compound.map((item) => (
+                    <div key={uuidv4()}>
+                      <p>{item}</p>
+                    </div>
+                  ))}
+                </div>
                 <div>
                   <p>{item.weight}г,</p>
                   <p>ккал {item.kcal}</p>

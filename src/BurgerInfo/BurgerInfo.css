@@ -61,6 +61,10 @@
 .BurgerInfo_img {
   height: 242px;
 }
+.compound_div{
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 1800px) {
   .BurgerInfo {
     margin-top: -655px;
