@@ -10,6 +10,9 @@
   font-size: 40px;
   margin-top: 50px;
 }
+.none2{
+  display: none;
+}
 .basket{
   margin-top: 130px;
   position: absolute;
@@ -203,7 +206,6 @@
   .menu_of_burgers_all{
     width: 65%;
     margin-left: 35%;
-    margin-bottom: 100px;
   }
   .nav{
     padding-left: 20%;
@@ -260,15 +262,23 @@
 }
 }
 @media(max-width: 900px) {
+  .none2{
+    display: block;
+  }
+  .none1{
+    display: none;
+  }
   .basket{
     margin-top: 20px;
     position: sticky;
     width: 60%;
     margin-left: 20%;
+    margin-bottom: 100px;
   }
   .menu_of_burgers_all{
     width: 100%;
     margin-left: 0;
+    margin-bottom: 0;
   }
   .nav_img{
     margin-bottom: 0;

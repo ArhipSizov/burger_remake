@@ -102,17 +102,17 @@
 }
 @media (max-width: 900px) {
   .BurgerInfo {
-    margin-top: -861px;
+    margin-top: -600px;
     margin-left: -2%;
   }
 }
 @media (max-width: 700px) {
   .BurgerInfo {
-    margin-top: -901px;
+    margin-top: -640px;
   }
 }
 @media (max-width: 400px) {
   .BurgerInfo {
-    margin-top: -841px;
+    margin-top: -580px;
   }
 }

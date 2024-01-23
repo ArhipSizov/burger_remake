@@ -158,7 +158,7 @@ function App() {
         </div>
         </div>
 
-        <div className="basket">
+        <div className="basket none1">
           <div className="basket_all_num_div">
             <p className="basket_all_num_text">Корзина</p>
             <div className="basket_all_num">{allNum}</div>
@@ -323,6 +323,38 @@ function App() {
           <Route path="*" element={<Error />} />
           <Route path="/combo" element={<Combo />} />
         </Routes>
+        <div className="basket none2">
+          <div className="basket_all_num_div">
+            <p className="basket_all_num_text">Корзина</p>
+            <div className="basket_all_num">{allNum}</div>
+          </div>        
+          {showModal3 && (
+          <div>
+          <div className="active_burgers">
+            {active.map((item) => (
+              <BurgerActive
+                {...item}
+                key={item.id}
+                editAllNum={editAllNum}
+                editAllSum={editAllSum}
+                delCards={delCards}
+              />
+            ))}
+          </div>
+          <div className="basket_all_cost_div">
+            <p className="basket_all_cost_text">Итого</p>
+            <p className="basket_all_cost">{allSum}р</p>
+          </div>
+          <button onClick={()=>setShowModal2(true)} className="delyvery_button">Оформить заказ</button>
+          <div className="delivery">
+            <img src="../src/assets/Доставка.png" alt="" />
+            <p className="delivery_text">Бесплатная доставка</p>
+          </div></div>)||(
+            <div>
+              <p className="basket_zero">Тут пока пусто :(</p>
+            </div>
+          )}  
+        </div>  
         <div className="footer">
           <div className="left_footer">
             <img
