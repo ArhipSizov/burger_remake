@@ -5,11 +5,7 @@
     background: #FFFFFF;
     margin-bottom: 30px;
     border-radius:18px;
-    height: 415px;
     cursor: pointer;
-}
-.AllUsersAlt{
-    height: 475px;
 }
 .BurgerLists_button{
     background: #F2F2F3;
@@ -50,5 +46,15 @@
 @media(max-width: 1300px) {
     .AllUsers, .AllUsersAlt{
         width: 48%;
+    }
+}
+@media(max-width: 900px) {
+    .AllUsers, .AllUsersAlt{
+        width: 32%;
+    }
+}
+@media(max-width: 700px) {
+    .AllUsers, .AllUsersAlt{
+        width: 49%;
     }
 }
