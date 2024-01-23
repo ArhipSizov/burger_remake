@@ -27,7 +27,7 @@ export default function BurgerInfo({
                 <p>Соус горчичный</p>
                 <div>
                   <p>{item.weight}г,</p>
-                  <p>ккал 440</p>
+                  <p>ккал {item.kcal}</p>
                 </div>
               </div>
             </div>
