@@ -62,7 +62,7 @@ export default function BurgerActive({
               close(-num, -cost);
             }}
             className="close_in_num"
-            src="../src/assets/close.svg"
+            src="../public/img/close.svg"
             alt=""
           />
           <div className="num_of_burgers_div">
@@ -72,7 +72,7 @@ export default function BurgerActive({
                 editBut(-1);
               }}
               className="plus_or_minus"
-              src="../src/assets/minus.svg"
+              src="../public/img/minus.svg"
               alt=""
             />
             <p className="num_of_burgers">{num}</p>
@@ -82,7 +82,7 @@ export default function BurgerActive({
                 editBut(+1);
               }}
               className="plus_or_minus"
-              src="../src/assets/plus.svg"
+              src="../public/img/plus.svg"
               alt=""
             />
           </div>

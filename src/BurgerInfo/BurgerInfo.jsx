@@ -17,7 +17,7 @@ export default function BurgerInfo({
         <div className="BurgerInfo_div">
           <div>
             <p className="BurgerInfo_name">{item.name}</p>
-            <img className="close_img" src="../src/assets/close.svg" alt="" />
+            <img className="close_img" src="../public/img/close.svg" alt="" />
           </div>
           <div className="BurgerInfo_footer">
             <img className="BurgerInfo_img" src={item.img} alt="" />

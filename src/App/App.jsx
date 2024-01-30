@@ -147,11 +147,11 @@ function App() {
           />
         )}
         <div className="nav">
-          <img className="nav_img" src="../src/assets/logo.png" alt="" />
+          <img className="nav_img" src="../public/img/logo.png" alt="" />
           <div className="mav_no_logo">
             <img
               className="burger_logo"
-              src="../src/assets/burger_logo.png"
+              src="../public/img/burger_logo.png"
               alt=""
             />
             <div className="nav_text">
@@ -198,7 +198,7 @@ function App() {
                 Оформить заказ
               </button>
               {showModalDelivery && (<div className="delivery">
-                <img src="../src/assets/Доставка.png" alt="" />
+                <img src="../public/img/Доставка.png" alt="" />
                 <p className="delivery_text">Бесплатная доставка</p>
               </div>)}
             </div>
@@ -370,7 +370,7 @@ function App() {
                 Оформить заказ
               </button>
               {showModalDelivery && (<div className="delivery">
-                <img src="../src/assets/Доставка.png" alt="" />
+                <img src="../public/img/Доставка.png" alt="" />
                 <p className="delivery_text">Бесплатная доставка</p>
               </div>)}
             </div>
@@ -384,7 +384,7 @@ function App() {
           <div className="left_footer">
             <img
               className="left_footer_img"
-              src="../src/assets/logo_footer.png"
+              src="../public/img/logo_footer.png"
               alt=""
             />
             <div>
@@ -397,7 +397,7 @@ function App() {
             <div className="center_footer_div">
               <img
                 className="center_footer_img"
-                src="../src/assets/call.png"
+                src="../public/img/call.png"
                 alt=""
               />
               <p className="center_footer_number">+7(930)833-38-11</p>
@@ -409,14 +409,14 @@ function App() {
               <a href="https://vk.com/">
                 <img
                   className="right_footer_WK"
-                  src="../src/assets/WK.png"
+                  src="../public/img/WK.png"
                   alt=""
                 />
               </a>
               <a href="https://web.telegram.org/a/">
                 <img
                   className="right_footer_telegram"
-                  src="../src/assets/telegram.png"
+                  src="../public/img/telegram.png"
                   alt=""
                 />
               </a>
