@@ -114,27 +114,38 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
+  const [showModalDelivery, setShowModalDelivery] = useState(false);
   const [indexUserModal, setIndexUserModal] = useState(0);
 
   function handleOpenModal(id) {
     setShowModal(true);
-    setIndexUserModal(id - 1)
+    setIndexUserModal(id - 1);
   }
-  setTimeout(function() {
-  if (active.length == 1) {
-    setShowModal3(false);
-  }else{
-    setShowModal3(true);
-  }}, 10)
+
+  setTimeout(function () {
+    if (active.length == 1) {
+      setShowModal3(false);
+    } else {
+      setShowModal3(true);
+    }
+
+    if (allSum > 599) {
+      setShowModalDelivery(true)
+    }else if (allSum < 600) {
+      setShowModalDelivery(false)
+    }
+  }, 10);
 
   return (
     <Router>
       <div className="All">
-      {showModal2 && (
-        <DeliveryAdd setShowModal2={setShowModal2}
-        allSum={allSum}
-        active={active}/>
-      )}
+        {showModal2 && (
+          <DeliveryAdd
+            setShowModal2={setShowModal2}
+            allSum={allSum}
+            active={active}
+          />
+        )}
         <div className="nav">
           <img className="nav_img" src="../src/assets/logo.png" alt="" />
           <div className="mav_no_logo">
@@ -151,46 +162,53 @@ function App() {
           </div>
         </div>
         <div className="main2">
-        <div className="main">
-          {menu.map((item) => (
-            <MenuBlock {...item} key={item.id} />
-          ))}
-        </div>
+          <div className="main">
+            {menu.map((item) => (
+              <MenuBlock {...item} key={item.id} />
+            ))}
+          </div>
         </div>
 
         <div className="basket none1">
           <div className="basket_all_num_div">
             <p className="basket_all_num_text">Корзина</p>
             <div className="basket_all_num">{allNum}</div>
-          </div>        
-          {showModal3 && (
-          <div>
-          <div className="active_burgers">
-            {active.map((item) => (
-              <BurgerActive
-                {...item}
-                key={item.id}
-                editAllNum={editAllNum}
-                editAllSum={editAllSum}
-                delCards={delCards}
-              />
-            ))}
           </div>
-          <div className="basket_all_cost_div">
-            <p className="basket_all_cost_text">Итого</p>
-            <p className="basket_all_cost">{allSum}р</p>
-          </div>
-          <button onClick={()=>setShowModal2(true)} className="delyvery_button">Оформить заказ</button>
-          <div className="delivery">
-            <img src="../src/assets/Доставка.png" alt="" />
-            <p className="delivery_text">Бесплатная доставка</p>
-          </div></div>)||(
+          {(showModal3 && (
+            <div>
+              <div className="active_burgers">
+                {active.map((item) => (
+                  <BurgerActive
+                    {...item}
+                    key={item.id}
+                    editAllNum={editAllNum}
+                    editAllSum={editAllSum}
+                    delCards={delCards}
+                  />
+                ))}
+              </div>
+              <div className="basket_all_cost_div">
+                <p className="basket_all_cost_text">Итого</p>
+                <p className="basket_all_cost">{allSum}р</p>
+              </div>
+              <button
+                onClick={() => setShowModal2(true)}
+                className="delyvery_button"
+              >
+                Оформить заказ
+              </button>
+              {showModalDelivery && (<div className="delivery">
+                <img src="../src/assets/Доставка.png" alt="" />
+                <p className="delivery_text">Бесплатная доставка</p>
+              </div>)}
+            </div>
+          )) || (
             <div>
               <p className="basket_zero">Тут пока пусто :(</p>
             </div>
-          )}  
-        </div>    
-        
+          )}
+        </div>
+
         <Routes>
           <Route
             path="/"
@@ -327,34 +345,41 @@ function App() {
           <div className="basket_all_num_div">
             <p className="basket_all_num_text">Корзина</p>
             <div className="basket_all_num">{allNum}</div>
-          </div>        
-          {showModal3 && (
-          <div>
-          <div className="active_burgers">
-            {active.map((item) => (
-              <BurgerActive
-                {...item}
-                key={item.id}
-                editAllNum={editAllNum}
-                editAllSum={editAllSum}
-                delCards={delCards}
-              />
-            ))}
           </div>
-          <div className="basket_all_cost_div">
-            <p className="basket_all_cost_text">Итого</p>
-            <p className="basket_all_cost">{allSum}р</p>
-          </div>
-          <button onClick={()=>setShowModal2(true)} className="delyvery_button">Оформить заказ</button>
-          <div className="delivery">
-            <img src="../src/assets/Доставка.png" alt="" />
-            <p className="delivery_text">Бесплатная доставка</p>
-          </div></div>)||(
+          {(showModal3 && (
+            <div>
+              <div className="active_burgers">
+                {active.map((item) => (
+                  <BurgerActive
+                    {...item}
+                    key={item.id}
+                    editAllNum={editAllNum}
+                    editAllSum={editAllSum}
+                    delCards={delCards}
+                  />
+                ))}
+              </div>
+              <div className="basket_all_cost_div">
+                <p className="basket_all_cost_text">Итого</p>
+                <p className="basket_all_cost">{allSum}р</p>
+              </div>
+              <button
+                onClick={() => setShowModal2(true)}
+                className="delyvery_button"
+              >
+                Оформить заказ
+              </button>
+              {showModalDelivery && (<div className="delivery">
+                <img src="../src/assets/Доставка.png" alt="" />
+                <p className="delivery_text">Бесплатная доставка</p>
+              </div>)}
+            </div>
+          )) || (
             <div>
               <p className="basket_zero">Тут пока пусто :(</p>
             </div>
-          )}  
-        </div>  
+          )}
+        </div>
         <div className="footer">
           <div className="left_footer">
             <img
@@ -381,16 +406,20 @@ function App() {
           <div className="right_footer">
             <p className="right_footer_p">Мы в соцсетях</p>
             <div className="right_footer_div">
-            <a href="https://vk.com/"><img
-                className="right_footer_WK"
-                src="../src/assets/WK.png"
-                alt=""
-              /></a>
-              <a href="https://web.telegram.org/a/"><img
-                className="right_footer_telegram"
-                src="../src/assets/telegram.png"
-                alt=""
-              /></a>
+              <a href="https://vk.com/">
+                <img
+                  className="right_footer_WK"
+                  src="../src/assets/WK.png"
+                  alt=""
+                />
+              </a>
+              <a href="https://web.telegram.org/a/">
+                <img
+                  className="right_footer_telegram"
+                  src="../src/assets/telegram.png"
+                  alt=""
+                />
+              </a>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
   const [showModal4, setShowModal4] = useState(true);
   const [showModal5, setShowModal5] = useState(false);
   const [showModal6, setShowModal6] = useState(false);
+  const [showModal7, setShowModal7] = useState(true);
 
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
@@ -16,13 +17,20 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
   const [input22, setInput22] = useState("");
   const [input23, setInput23] = useState("");
 
+  let allSum_d = allSum + 100;
+    setTimeout( function(){if (allSum < 600) {
+    setShowModal7(true)
+  }else{
+    setShowModal7(false)
+  }}, 1);
+
   function setShowModal5_f() {
     if (input1 == "" || input2 == "" || input3 == "") {
-      setShowModal6(true)
+      setShowModal6(true);
     } else {
       if (input21 == "" || input22 == "" || input23 == "") {
         if (input11 == "") {
-          setShowModal6(true)
+          setShowModal6(true);
         } else {
           setShowModal5(true);
         }
@@ -142,14 +150,22 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
                 <option>ул. Уральская д. 6</option>
               </select>
             )}
-            <p>Стоимость: {allSum}р</p>
+            <p>
+              {showModal7 && (
+                  <p>Стоимость + доставка: {allSum_d}р</p>
+              )||(
+                <p>Стоимость: {allSum}р</p>
+              )}
+            </p>
             <input
               value={input3}
               onChange={(event) => setInput3(event.target.value)}
               type="text"
               placeholder="Введите данные карты"
             />
-            {showModal6 && <p className="Eror_delivery">Заполните все колонки!</p>}
+            {showModal6 && (
+              <p className="Eror_delivery">Заполните все колонки!</p>
+            )}
             <div
               onClick={() => {
                 setShowModal5_f();
