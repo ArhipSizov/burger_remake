@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuBlock from "../Menu/Menu";
 import "./App.css";
 import arrCard from "../ListBurgers.json";
@@ -114,6 +114,8 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
+  const [showModalExpand, setShowModalExpand] = useState(false);
+  const [showModalNotExpand, setShowModalNotExpand] = useState(false);
   const [showModalDelivery, setShowModalDelivery] = useState(false);
   const [indexUserModal, setIndexUserModal] = useState(0);
 
@@ -128,13 +130,41 @@ function App() {
     } else {
       setShowModal3(true);
     }
-
+    if (active.length > 3 && showModalNotExpand == false) {
+      setShowModalExpand(true);
+    } else {
+      setShowModalExpand(false);
+    }
     if (allSum > 599) {
       setShowModalDelivery(true);
     } else if (allSum < 600) {
       setShowModalDelivery(false);
     }
   }, 10);
+
+function functionExpand() {
+  setShowModalExpand(false)
+  setShowModalNotExpand(true)
+}
+function functionNotExpand() {
+  setShowModalExpand(true)
+  setShowModalNotExpand(false)
+}
+  useEffect(() => {
+    const basket = document.querySelector(".active_burgers_const");
+    const basket2 = document.querySelector(".active_burgers_const2");
+    if (showModalNotExpand == true) {
+      basket.classList.remove('active_burgers')
+      basket2.classList.remove('active_burgers')
+
+    }else{
+      if (showModalExpand == true) {
+        basket.classList.add('active_burgers')
+        basket2.classList.add('active_burgers')
+      }
+    }
+    console.log(basket);
+  }, [showModalExpand]);
 
   return (
     <Router>
@@ -172,7 +202,7 @@ function App() {
           </div>
           {(showModal3 && (
             <div>
-              <div className="active_burgers">
+              <div className="active_burgers active_burgers_const">
                 {active.map((item) => (
                   <BurgerActive
                     {...item}
@@ -183,6 +213,16 @@ function App() {
                   />
                 ))}
               </div>
+              {showModalExpand && (
+                <p onClick={() => functionExpand()} className="expand">
+                  Развернуть
+                </p>
+              )}
+              {showModalNotExpand && (
+                <p onClick={() => functionNotExpand()} className="not_expand">
+                  Свернуть
+                </p>
+              )}
               <div className="basket_all_cost_div">
                 <p className="basket_all_cost_text">Итого</p>
                 <p className="basket_all_cost">{allSum}р</p>
@@ -346,7 +386,7 @@ function App() {
           </div>
           {(showModal3 && (
             <div>
-              <div className="active_burgers">
+              <div className="active_burgers active_burgers_const2">
                 {active.map((item) => (
                   <BurgerActive
                     {...item}
@@ -357,6 +397,16 @@ function App() {
                   />
                 ))}
               </div>
+              {showModalExpand && (
+                <p onClick={() => functionExpand()} className="expand">
+                  Развернуть
+                </p>
+              )}
+              {showModalNotExpand && (
+                <p onClick={() => functionNotExpand()} className="not_expand">
+                  Свернуть
+                </p>
+              )}
               <div className="basket_all_cost_div">
                 <p className="basket_all_cost_text">Итого</p>
                 <p className="basket_all_cost">{allSum}р</p>
