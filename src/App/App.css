@@ -96,7 +96,7 @@
 .nav{
   margin-left: -13%;
   width: 125.5%;
-  background-image: url("../public/img/Ellipse.png");
+  background-image: url("/img/Ellipse.png");
   background-repeat: no-repeat;
   background-size: 100%;
   padding-left: 30%;
@@ -213,7 +213,7 @@
     margin-top: -50px;
     padding-top: 50px;
     padding-bottom: 530px;
-    background-image: url("../public/img/Ellipse1.png");
+    background-image: url("/img/Ellipse1.png");
   }
 }
 @media(max-width: 1100px) {

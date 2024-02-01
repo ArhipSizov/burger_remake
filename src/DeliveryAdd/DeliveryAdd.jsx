@@ -46,7 +46,7 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
     return (
       <div className="DeliveryAdd" onClick={() => setShowModal2(false)}>
         {showModal5 && (
-          <a href="https://www.google.by/?hl=ru">
+          <a href="https:/www.google.by/?hl=ru">
             <div
               onClick={() => {
                 setShowModal5(false);

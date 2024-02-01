@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "burgers-d4cfd",
-    "public": "public",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",

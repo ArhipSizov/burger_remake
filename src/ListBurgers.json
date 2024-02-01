@@ -1,47 +1,47 @@
 {
   "Menu": [
     {
-      "img": "../public/img/Бургеры.png",
+      "img": "/img/Бургеры.png",
       "text": "Бургеры",
       "link": "/"
     },
     {
-      "img": "../public/img/Вок.png",
+      "img": "/img/Вок.png",
       "text": "Вок",
       "link": "vok"
     },
     {
-      "img": "../public/img/Десерты.png",
+      "img": "/img/Десерты.png",
       "text": "Десерты",
       "link": "dessert"
     },
     {
-      "img": "../public/img/Закуски.png",
+      "img": "/img/Закуски.png",
       "text": "Закуски",
       "link": "snacks"
     },
     {
-      "img": "../public/img/Комбо.png",
+      "img": "/img/Комбо.png",
       "text": "Комбо",
       "link": "combo"
     },
     {
-      "img": "../public/img/Пицца.png",
+      "img": "/img/Пицца.png",
       "text": "Пицца",
       "link": "pizza"
     },
     {
-      "img": "../public/img/Соусы.png",
+      "img": "/img/Соусы.png",
       "text": "Соусы",
       "link": "sauces"
     },
     {
-      "img": "../public/img/Хот-доги.png",
+      "img": "/img/Хот-доги.png",
       "text": "Хот-доги",
       "link": "HotDogs"
     },
     {
-      "img": "../public/img/Шаурма.png",
+      "img": "/img/Шаурма.png",
       "text": "Шаурма",
       "link": "shawarma"
     }
@@ -53,7 +53,7 @@
   ],
   "allBurgers": [
     {
-      "img": "../public/img/burger550.png",
+      "img": "/img/burger550.png",
       "name": "Супер сырный",
       "cost": "550",
       "weight": "512",
@@ -71,7 +71,7 @@
       "id_false": "1"
     },
     {
-      "img": "../public/img/burger689.png",
+      "img": "/img/burger689.png",
       "name": "Мясная бомба",
       "cost": "689",
       "weight": "520",
@@ -88,7 +88,7 @@
       "id_false": "2"
     },
     {
-      "img": "../public/img/burger480.png",
+      "img": "/img/burger480.png",
       "name": "Тяжелый удар",
       "cost": "480",
       "weight": "470",
@@ -106,7 +106,7 @@
       "id_false": "3"
     },
     {
-      "img": "../public/img/burger450.png",
+      "img": "/img/burger450.png",
       "name": "Вечная классика",
       "cost": "450",
       "weight": "450",
@@ -124,7 +124,7 @@
       "id_false": "4"
     },
     {
-      "img": "../public/img/burger639.png",
+      "img": "/img/burger639.png",
       "name": "Сытный",
       "cost": "639",
       "weight": "580",
@@ -142,7 +142,7 @@
       "id_false": "5"
     },
     {
-      "img": "../public/img/burger560.png",
+      "img": "/img/burger560.png",
       "name": "Итальянский",
       "cost": "560",
       "weight": "510",
@@ -161,7 +161,7 @@
   ],
   "allSnacks": [
     {
-      "img": "../public/img/Crisps.png",
+      "img": "/img/Crisps.png",
       "name": "Начос",
       "cost": "250",
       "weight": "220",
@@ -175,7 +175,7 @@
       "id_false": "1"
     },
     {
-      "img": "../public/img/Potato.png",
+      "img": "/img/Potato.png",
       "name": "Картошка фри",
       "cost": "245",
       "weight": "180",
@@ -189,7 +189,7 @@
       "id_false": "2"
     },
     {
-      "img": "../public/img/Rings.png",
+      "img": "/img/Rings.png",
       "name": "Луковые кольца",
       "cost": "230",
       "weight": "160",
@@ -205,7 +205,7 @@
   ],
   "allHotDogs": [
     {
-      "img": "../public/img/HotDog290.png",
+      "img": "/img/HotDog290.png",
       "name": "Домашний хот-дог",
       "cost": "290",
       "weight": "250",
@@ -221,7 +221,7 @@
       "id_false": "1"
     },
     {
-      "img": "../public/img/HotDog239.png",
+      "img": "/img/HotDog239.png",
       "name": "Жгучий хот-дог",
       "cost": "239",
       "weight": "245",
@@ -237,7 +237,7 @@
       "id_false": "2"
     },
     {
-      "img": "../public/img/HotDog220.png",
+      "img": "/img/HotDog220.png",
       "name": "Классический хот-дог",
       "cost": "220",
       "weight": "215",
@@ -255,7 +255,7 @@
   ],
   "allVoks": [
     {
-      "img": "../public/img/Vok.png",
+      "img": "/img/Vok.png",
       "name": "Вок классический",
       "cost": "290",
       "weight": "225",
@@ -271,7 +271,7 @@
       "id_false": "1"
     },
     {
-      "img": "../public/img/VokCheese.png",
+      "img": "/img/VokCheese.png",
       "name": "Сырный вок",
       "cost": "390",
       "weight": "370",
@@ -286,7 +286,7 @@
       "id_false": "2"
     },
     {
-      "img": "../public/img/VokHot.png",
+      "img": "/img/VokHot.png",
       "name": "Острый вок",
       "cost": "420",
       "weight": "400",
@@ -304,7 +304,7 @@
   ],
   "allDesserts": [
     {
-      "img": "../public/img/DessertsSwedish.png",
+      "img": "/img/DessertsSwedish.png",
       "name": "Шведский",
       "cost": "390",
       "weight": "205",
@@ -317,7 +317,7 @@
       "id_false": "1"
     },
     {
-      "img": "../public/img/DessertsBerryAndFruit.png",
+      "img": "/img/DessertsBerryAndFruit.png",
       "name": "Ягодный",
       "cost": "410",
       "weight": "200",
@@ -332,7 +332,7 @@
       "id_false": "2"
     },
     {
-      "img": "../public/img/DessertsAir.png",
+      "img": "/img/DessertsAir.png",
       "name": "Воздушный",
       "cost": "230",
       "weight": "50",
@@ -347,7 +347,7 @@
   ],
   "allShawarmas": [
     {
-      "img": "../public/img/ShawarmaClassic.png",
+      "img": "/img/ShawarmaClassic.png",
       "name": "Классическая",
       "cost": "200",
       "weight": "300",
@@ -364,7 +364,7 @@
       "id_false": "1"
     },
     {
-      "img": "../public/img/ShawarmaHot.png",
+      "img": "/img/ShawarmaHot.png",
       "name": "Острая",
       "cost": "360",
       "weight": "400",
@@ -381,7 +381,7 @@
       "id_false": "2"
     },
     {
-      "img": "../public/img/ShawarmaChicken.png",
+      "img": "/img/ShawarmaChicken.png",
       "name": "Куриная",
       "cost": "439",
       "weight": "495",
@@ -397,7 +397,7 @@
       "id_false": "3"
     },
     {
-      "img": "../public/img/ShawarmaCheese.png",
+      "img": "/img/ShawarmaCheese.png",
       "name": "Сырная",
       "cost": "220",
       "weight": "290",
@@ -416,7 +416,7 @@
   ],
   "allPizzas": [
     {
-      "img": "../public/img/fermerskaya.png",
+      "img": "/img/fermerskaya.png",
       "name": "Фермерская",
       "cost": "620",
       "weight": "790",
@@ -432,7 +432,7 @@
       "id_false": "1"
     },
     {
-      "img": "../public/img/gavayskaya.png",
+      "img": "/img/gavayskaya.png",
       "name": "Гавайская",
       "cost": "745",
       "weight": "855",
@@ -448,7 +448,7 @@
       "id_false": "2"
     },
     {
-      "img": "../public/img/pepperoni.png",
+      "img": "/img/pepperoni.png",
       "name": "Пепперони",
       "cost": "999",
       "weight": "1200",
@@ -465,7 +465,7 @@
   ],
   "allSauces": [
     {
-      "img": "../public/img/Tomato.png",
+      "img": "/img/Tomato.png",
       "name": "Томатный",
       "cost": "50",
       "weight": "30",
@@ -478,7 +478,7 @@
       "id_false": "1"
     },
     {
-      "img": "../public/img/Garlic.png",
+      "img": "/img/Garlic.png",
       "name": "Чесночный",
       "cost": "45",
       "weight": "20",
@@ -491,7 +491,7 @@
       "id_false": "2"
     },
     {
-      "img": "../public/img/Pesto.png",
+      "img": "/img/Pesto.png",
       "name": "Песто",
       "cost": "49",
       "weight": "25",
@@ -504,7 +504,7 @@
       "id_false": "3"
     },
     {
-      "img": "../public/img/Cheese.png",
+      "img": "/img/Cheese.png",
       "name": "Сырный",
       "cost": "40",
       "weight": "20",

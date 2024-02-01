@@ -136,6 +136,7 @@ function App() {
     }
   }, 10);
 
+
   return (
     <Router>
       <div className="All">
@@ -147,11 +148,11 @@ function App() {
           />
         )}
         <div className="nav">
-          <img className="nav_img" src="../public/img/logo.png" alt="" />
+          <img className="nav_img" src="/img/logo.png" alt="" />
           <div className="mav_no_logo">
             <img
               className="burger_logo"
-              src="../public/img/burger_logo.png"
+              src="/img/burger_logo.png"
               alt=""
             />
             <div className="nav_text">
@@ -198,7 +199,7 @@ function App() {
                 Оформить заказ
               </button>
               {showModalDelivery && (<div className="delivery">
-                <img src="../public/img/Доставка.png" alt="" />
+                <img src="/img/Доставка.png" alt="" />
                 <p className="delivery_text">Бесплатная доставка</p>
               </div>)}
             </div>
@@ -370,7 +371,7 @@ function App() {
                 Оформить заказ
               </button>
               {showModalDelivery && (<div className="delivery">
-                <img src="../public/img/Доставка.png" alt="" />
+                <img src="/img/Доставка.png" alt="" />
                 <p className="delivery_text">Бесплатная доставка</p>
               </div>)}
             </div>
@@ -384,7 +385,7 @@ function App() {
           <div className="left_footer">
             <img
               className="left_footer_img"
-              src="../public/img/logo_footer.png"
+              src="/img/logo_footer.png"
               alt=""
             />
             <div>
@@ -397,7 +398,7 @@ function App() {
             <div className="center_footer_div">
               <img
                 className="center_footer_img"
-                src="../public/img/call.png"
+                src="/img/call.png"
                 alt=""
               />
               <p className="center_footer_number">+7(930)833-38-11</p>
@@ -406,17 +407,17 @@ function App() {
           <div className="right_footer">
             <p className="right_footer_p">Мы в соцсетях</p>
             <div className="right_footer_div">
-              <a href="https://vk.com/">
+              <a href="https:/vk.com/">
                 <img
                   className="right_footer_WK"
-                  src="../public/img/WK.png"
+                  src="/img/WK.png"
                   alt=""
                 />
               </a>
-              <a href="https://web.telegram.org/a/">
+              <a href="https:/web.telegram.org/a/">
                 <img
                   className="right_footer_telegram"
-                  src="../public/img/telegram.png"
+                  src="/img/telegram.png"
                   alt=""
                 />
               </a>
