@@ -144,11 +144,15 @@
   font-size: 12px;
 }
 .left_footer_img{
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 .center_footer_div{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
+}
+.right_footer{
+  margin-bottom: 50px;
 }
 .right_footer_p{
   font-size: 24px;
@@ -293,7 +297,7 @@
     background-size: 100% 100%;
   }
   .footer{
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .center_footer_div{
     width: 200px;

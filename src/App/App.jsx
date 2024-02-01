@@ -130,12 +130,11 @@ function App() {
     }
 
     if (allSum > 599) {
-      setShowModalDelivery(true)
-    }else if (allSum < 600) {
-      setShowModalDelivery(false)
+      setShowModalDelivery(true);
+    } else if (allSum < 600) {
+      setShowModalDelivery(false);
     }
   }, 10);
-
 
   return (
     <Router>
@@ -150,11 +149,7 @@ function App() {
         <div className="nav">
           <img className="nav_img" src="/img/logo.png" alt="" />
           <div className="mav_no_logo">
-            <img
-              className="burger_logo"
-              src="/img/burger_logo.png"
-              alt=""
-            />
+            <img className="burger_logo" src="/img/burger_logo.png" alt="" />
             <div className="nav_text">
               <p className="nav_text_name_1">Только самые</p>
               <p className="nav_text_name_2">сочные бургеры!</p>
@@ -198,10 +193,12 @@ function App() {
               >
                 Оформить заказ
               </button>
-              {showModalDelivery && (<div className="delivery">
-                <img src="/img/Доставка.png" alt="" />
-                <p className="delivery_text">Бесплатная доставка</p>
-              </div>)}
+              {showModalDelivery && (
+                <div className="delivery">
+                  <img src="/img/Доставка.png" alt="" />
+                  <p className="delivery_text">Бесплатная доставка</p>
+                </div>
+              )}
             </div>
           )) || (
             <div>
@@ -370,10 +367,12 @@ function App() {
               >
                 Оформить заказ
               </button>
-              {showModalDelivery && (<div className="delivery">
-                <img src="/img/Доставка.png" alt="" />
-                <p className="delivery_text">Бесплатная доставка</p>
-              </div>)}
+              {showModalDelivery && (
+                <div className="delivery">
+                  <img src="/img/Доставка.png" alt="" />
+                  <p className="delivery_text">Бесплатная доставка</p>
+                </div>
+              )}
             </div>
           )) || (
             <div>
@@ -388,19 +387,11 @@ function App() {
               src="/img/logo_footer.png"
               alt=""
             />
-            <div>
-              <p>© YouMeal, 2022</p>
-              <p>Design: Anastasia Ilina</p>
-            </div>
           </div>
           <div className="center_footer">
             <p className="center_footer_p">Номер для заказа</p>
             <div className="center_footer_div">
-              <img
-                className="center_footer_img"
-                src="/img/call.png"
-                alt=""
-              />
+              <img className="center_footer_img" src="/img/call.png" alt="" />
               <p className="center_footer_number">+7(930)833-38-11</p>
             </div>
           </div>
@@ -408,11 +399,7 @@ function App() {
             <p className="right_footer_p">Мы в соцсетях</p>
             <div className="right_footer_div">
               <a href="https:/vk.com/">
-                <img
-                  className="right_footer_WK"
-                  src="/img/WK.png"
-                  alt=""
-                />
+                <img className="right_footer_WK" src="/img/WK.png" alt="" />
               </a>
               <a href="https:/web.telegram.org/a/">
                 <img
@@ -423,6 +410,10 @@ function App() {
               </a>
             </div>
           </div>
+        </div>
+        <div>
+          <p>© YouMeal, 2022</p>
+          <p>Design: Anastasia Ilina</p>
         </div>
       </div>
     </Router>
