@@ -57,7 +57,7 @@ export default function BurgerActive({
           <p>{cost}р</p>
         </div>
         <div className="num_of_burgers_div_and_close">
-          <img 
+          <img
             onClick={() => {
               close(-num, -cost);
             }}
@@ -66,25 +66,25 @@ export default function BurgerActive({
             alt=""
           />
           <div className="num_of_burgers_div">
-            <img
+            <p
+              className="plus_or_minus"
               onClick={() => {
                 editBut2(-cost);
                 editBut(-1);
               }}
-              className="plus_or_minus"
-              src="/img/minus.png"
-              alt=""
-            />
+            >
+              -
+            </p>
             <p className="num_of_burgers">{num}</p>
-            <img
+            <p
+              className="plus_or_minus"
               onClick={() => {
                 editBut2(+cost);
                 editBut(+1);
               }}
-              className="plus_or_minus"
-              src="/img/plus.png"
-              alt=""
-            />
+            >
+              +
+            </p>
           </div>
         </div>
       </div>

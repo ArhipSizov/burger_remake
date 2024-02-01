@@ -29,6 +29,8 @@
 }
 .plus_or_minus{
     width: 10px;
+    font-size: 20px;
+    margin-top: 5px;
 }
 .close_in_num{
     width: 24px;
