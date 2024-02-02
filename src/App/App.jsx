@@ -461,7 +461,7 @@ function functionNotExpand() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="footer_another">
           <p>© YouMeal, 2022</p>
           <p>Design: Anastasia Ilina</p>
         </div>

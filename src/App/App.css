@@ -162,9 +162,14 @@
 .right_footer_telegram{
   cursor: pointer;
   margin-left: 16px;
+  transition: 0.2s linear;
 }
 .right_footer_WK{
   cursor: pointer;
+  transition: 0.2s linear;
+}
+.right_footer_WK:hover, .right_footer_telegram:hover{
+  transform: scale(1.1);
 }
 .center_footer_p{
   font-size: 24px;
@@ -192,6 +197,9 @@
 .expand, .not_expand{
   cursor: pointer;
   font-size: 18px;
+}
+.footer_another{
+  margin-bottom: 30px;
 }
 @media(max-width: 1800px) {
   .nav{
