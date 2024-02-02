@@ -18,11 +18,13 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
   const [input23, setInput23] = useState("");
 
   let allSum_d = allSum + 100;
-    setTimeout( function(){if (allSum < 600) {
-    setShowModal7(true)
-  }else{
-    setShowModal7(false)
-  }}, 1);
+  setTimeout(function () {
+    if (allSum < 600) {
+      setShowModal7(true);
+    } else {
+      setShowModal7(false);
+    }
+  }, 1);
 
   function setShowModal5_f() {
     if (input1 == "" || input2 == "" || input3 == "") {
@@ -57,18 +59,21 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
             </div>
           </a>
         )}
-        <div
-          className="DeliveryAdd_div"
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-        >
-          <div className="DeliveryAdd_div_2">
+        <div className="DeliveryAdd_div">
+          <div
+
+            className="DeliveryAdd_div_2"
+          >
             {active.map((item) => (
               <BurgersInDelivery {...item} key={item.id} />
             ))}
           </div>
-          <div className="input_all">
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className="input_all"
+          >
             <p className="input_all_delivery_p">Доставка</p>
             <input
               value={input1}
@@ -151,9 +156,7 @@ export default function DeliveryAdd({ setShowModal2, active, allSum }) {
               </select>
             )}
             <p>
-              {showModal7 && (
-                  <p>Стоимость + доставка: {allSum_d}р</p>
-              )||(
+              {(showModal7 && <p>Стоимость + доставка: {allSum_d}р</p>) || (
                 <p>Стоимость: {allSum}р</p>
               )}
             </p>
